@@ -1,0 +1,25 @@
+---
+apiVersion: bcc.bd-apaas.com/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kubevirt
+  namespace: kubevirt-manager
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`kubevirt.wodcloud.com`)
+      services:
+        - name: kubevirt-manager
+          port: 8080
+  tls:
+    certResolver: default
+---
+apiVersion: bcc.bd-apaas.com/v1alpha1
+kind: IngressHost
+metadata:
+  name: kubevirt
+  namespace: kubevirt-manager
+spec:
+  host: kubevirt.wodcloud.com
