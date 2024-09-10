@@ -35,17 +35,15 @@ mkdir -p ./tmp
 
 # Fedora
 # https://cache.wodcloud.com/vscode/kubevirt-cloud-images/Fedora-Cloud-Base-37-1.7.x86_64.raw.xz
-curl -x $SOCKS5_PROXY -L \
+curl -x $LOCAL_PROXY -L \
   https://mirrors.yun-idc.com/fedora/releases/37/Cloud/x86_64/images/Fedora-Cloud-Base-37-1.7.x86_64.raw.xz > \
   ./tmp/Fedora-Cloud-Base-37-1.7.x86_64.raw.xz
 
 mc cp --recursive ./tmp/ cache/vscode/kubevirt-cloud-images
 
-
-
 # Debian
 # https://cache.wodcloud.com/vscode/kubevirt-cloud-images/debian-12-generic-amd64-20240901-1857.raw.xz
-curl -x $SOCKS5_PROXY -L \
+curl -x $LOCAL_PROXY -L \
   https://cloud.debian.org/images/cloud/bookworm/20240901-1857/debian-12-generic-amd64-20240901-1857.raw > \
   ./tmp/debian-12-generic-amd64-20240901-1857.raw && \
 xz -z -k ./tmp/debian-12-generic-amd64-20240901-1857.raw
