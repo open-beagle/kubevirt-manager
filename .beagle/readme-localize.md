@@ -36,6 +36,12 @@ navTitle.replaceChildren($localize`Auto Scaling`);
 
 ## 生成翻译文件
 
+安装 localize 依赖
+
+```shell
+ng add @angular/localize
+```
+
 执行命令，会在当前目录生成 messages.xlf
 
 ```shell
@@ -97,3 +103,5 @@ const config = {
 ## 其他
 
 经常变更时，可以通过 node ./.beagle/merge.js ./.beagle/messages.zh.bak.xlf ./src/locale/messages.zh.xlf 将之前的翻译更新到新生成的messages文件中，然后再继续翻译。
+
+翻译之后，把 ./src/locale/messages.zh.xlf 做一下备份， 后续如有调整， 生成 messages.xlf 后， 再将备份的合并到 messages.zh.xlf 中。
