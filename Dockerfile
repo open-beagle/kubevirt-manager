@@ -7,7 +7,7 @@ LABEL description="Kubevirt Manager 1.4.1 - Builder"
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN cd /usr/src/app/src/assets/ && git clone https://github.com/novnc/noVNC.git
-RUN cd /usr/src/app && npm install -g npm@10.8.2 && npm run clean && npm install -g @angular/cli@18.1.1 && npm install && ng add @angular/localize && npm run build
+RUN cd /usr/src/app && npm install -g npm@10.8.2 && npm run clean && npm install -g @angular/cli@18.1.1 && npm install && ng add @angular/localize --skip-confirmation && npm run build
 
 # NGINX Image
 FROM nginx:1.27-alpine
