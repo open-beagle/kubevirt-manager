@@ -6,7 +6,7 @@
         <div class="card-header">
           <h3 class="card-title">
             <i class="fas fa-shield-alt"></i>
-            &nbsp;&nbsp;Firewall Rules
+            &nbsp;&nbsp;<ng-container i18n>Firewall Rules</ng-container>
           </h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" (click)="showNew()" title="New Rule...">
@@ -19,14 +19,14 @@
             <thead>
               <tr>
                 <th style="width: 10px">&nbsp;</th>
-                <th style="width: 100px">Namespace</th>
-                <th style="width: 100px">Name</th>
-                <th style="width: 20px">Type</th>
-                <th style="width: 60px">Target Type</th>
-                <th style="width: 20px">Target</th>
-                <th style="width: 100px">Filter Type</th>
-                <th style="width: 100px">Filter</th>                
-                <th style="width: 80px">Ports</th>
+                <th style="width: 100px" i18n>Namespace</th>
+                <th style="width: 100px" i18n>Name</th>
+                <th style="width: 20px" i18n>Type</th>
+                <th style="width: 60px" i18n>Target Type</th>
+                <th style="width: 20px" i18n>Target</th>
+                <th style="width: 100px" i18n>Filter Type</th>
+                <th style="width: 100px" i18n>Filter</th>                
+                <th style="width: 80px" i18n>Ports</th>
                 <th style="width: 20px">&nbsp;</th>
               </tr>
             </thead>
@@ -75,20 +75,20 @@
             <input type="hidden" id="new-node" name="new-node" value="">
             <div class="modal-body" id="new-value">
 
-                <label for="newRuleName">Rule Name</label>
+                <label for="newRuleName" i18n>Rule Name</label>
                 <input #newrulename type="text" class="form-control" id="new-rule-name" name="new-rule-name" placeholder="rule-name">
-                <label for="newRuleNamespace">Namespace:</label>
+                <label for="newRuleNamespace" i18n>Namespace:</label>
                 <select #newrulenamespace class="custom-select rounded-0" name="new-rule-namespace" id="new-rule-namespace">
                     <option>Value 1</option>
                 </select>
-                <label for="newRuleTargetType">Target Type:</label>
+                <label for="newRuleTargetType" i18n>Target Type:</label>
                 <select #newruletargettype class="custom-select rounded-0" name="new-rule-targettype" id="new-rule-targettype">
-                    <option value="namespace">Namespace</option>
-                    <option value="vm">VirtualMachine</option>
-                    <option value="vmpool">VirtualMachinePool</option>
-                    <option value="kcluster">Cluster</option>
-                    <option value="masterpool">ClusterMasterPool</option>
-                    <option value="workerpool">ClusterWorkerPool</option>
+                    <option value="namespace" i18n>Namespace</option>
+                    <option value="vm" i18n>VirtualMachine</option>
+                    <option value="vmpool" i18n>VirtualMachinePool</option>
+                    <option value="kcluster" i18n>Cluster</option>
+                    <option value="masterpool" i18n>ClusterMasterPool</option>
+                    <option value="workerpool" i18n>ClusterWorkerPool</option>
                 </select>
                 <label for="newRuleTargetValue">Target Value:</label>
                 <select #newruletargetvalue class="custom-select rounded-0" name="new-rule-targetvalue" id="new-rule-targetvalue">
@@ -101,12 +101,12 @@
                 </select>
                 <label for="newRuleSourceType">Source Type:</label>
                 <select #newrulesourcetype class="custom-select rounded-0" name="new-rule-sourcetype" id="new-rule-sourcetype">
-                    <option value="namespace">Namespace</option>
-                    <option value="vm">Virtual Machine</option>
-                    <option value="vmpool">Virtual Machine Pool</option>
-                    <option value="kcluster">Kubernetes Cluster</option>
-                    <option value="masterpool">Kubernetes Master Pool</option>
-                    <option value="workerpool">Kubernetes Worker Pool</option>
+                    <option value="namespace" i18n>Namespace</option>
+                    <option value="vm" i18n>Virtual Machine</option>
+                    <option value="vmpool" i18n>Virtual Machine Pool</option>
+                    <option value="kcluster" i18n>Kubernetes Cluster</option>
+                    <option value="masterpool" i18n>Kubernetes Master Pool</option>
+                    <option value="workerpool" i18n>Kubernetes Worker Pool</option>
                 </select>
                 <label for="newRuleSourceValue">Source Value:</label>
                 <select #newrulesourcevalue class="custom-select rounded-0" name="new-rule-sourcevalue" id="new-rule-sourcevalue">
@@ -118,13 +118,13 @@
                     <option>F</option>
                 </select>
                 <br/>
-                <label for="newRuleAllowAll">Protocol/Ports:</label><br>
+                <label for="newRuleAllowAll" i18n>Protocol/Ports:</label><br>
                 <div class="row">
                     <div class="col-1">
                         <input #newruleallowall type="hidden" name="new-rule-allowall" id="new-rule-allowall" value="yes">
                     </div>
-                    <div class="col-3"><input class="form-check-input" type="radio" name="rule-allowall" id="rule-allowall" value="yes" checked="true" aria-checked="true" (change)='changeRule("yes")'><label class="form-check-label">Allow all</label></div>
-                    <div class="col-3"><input class="form-check-input" type="radio" name="rule-allowall" id="rule-allowall" value="no" (change)='changeRule("no")'><label class="form-check-label">Specific protocols/ports</label></div>
+                    <div class="col-3"><input class="form-check-input" type="radio" name="rule-allowall" id="rule-allowall" value="yes" checked="true" aria-checked="true" (change)='changeRule("yes")'><label class="form-check-label" i18n>Allow all</label></div>
+                    <div class="col-3"><input class="form-check-input" type="radio" name="rule-allowall" id="rule-allowall" value="no" (change)='changeRule("no")'><label class="form-check-label" i18n>Specific protocols/ports</label></div>
                     <div class="col-5">&nbsp;</div>
                 </div>
                 <br/>
@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-1">
-                            <input class="form-check-input" type="checkbox" name="new-rule-tcp" id="new-rule-tcp" (change)='changeTCP($event)'><label class="form-check-label">TCP</label>
+                            <input class="form-check-input" type="checkbox" name="new-rule-tcp" id="new-rule-tcp" (change)='changeTCP($event)'><label class="form-check-label" i18n>TCP</label>
                         </div>
                         <div class="col-5">
                             <input #newruletcpports type="text" class="form-control" id="new-rule-tcpports" name="new-rule-tcpports" placeholder="80,443,8080..." pattern="/[[:digit:]][,?[[:digit:]]*/g" disabled>
@@ -143,7 +143,7 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-1">
-                            <input class="form-check-input" type="checkbox" name="new-rule-udp" id="new-rule-udp" (change)='changeUDP($event)'><label class="form-check-label">UDP</label>
+                            <input class="form-check-input" type="checkbox" name="new-rule-udp" id="new-rule-udp" (change)='changeUDP($event)'><label class="form-check-label" i18n>UDP</label>
                         </div>
                         <div class="col-5">
                             <input #newruleudpports type="text" class="form-control" id="new-rule-udpports" name="new-rule-udpports" placeholder="53,61,137..." pattern="/[[:digit:]][,?[[:digit:]]*/g" disabled>
@@ -153,8 +153,8 @@
                 </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")'>Close</button>
-              <button type="button" class="btn btn-primary">Create</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" i18n>Create</button>
             </div>
           </div>
           <!-- /.modal-content -->

@@ -19,14 +19,14 @@
             <thead>
               <tr>
                 <th style="width: 10px">&nbsp;</th>
-                <th style="width: 130px">Namespace</th>
-                <th style="width: 160px">Name</th>
-                <th style="width: 70px">VM Type</th>
-                <th style="width: 18px">vCPU</th>
-                <th style="width: 18px">Memory</th>
-                <th style="width: 80px">Status</th>
-                <th style="width: 80px">IP Address</th>
-                <th style="width: 250px">Actions</th>
+                <th style="width: 130px" i18n>Namespace</th>
+                <th style="width: 160px" i18n>Name</th>
+                <th style="width: 70px" i18n>VM Type</th>
+                <th style="width: 18px" i18n>vCPU</th>
+                <th style="width: 18px" i18n>Memory</th>
+                <th style="width: 80px" i18n>Status</th>
+                <th style="width: 80px" i18n>IP Address</th>
+                <th style="width: 250px" i18n>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -66,28 +66,28 @@
                     </span>
                     <!--- PAUSE BUTTON -->
                     <span [ngSwitch]="thisVM.status">
-                        <a class="btn" (click)='vmOperations("pause", thisVM.namespace, thisVM.name)' title="Pause..." *ngSwitchCase="'running'">
+                        <a class="btn" (click)='vmOperations("pause", thisVM.namespace, thisVM.name)' i18n-title title="Pause..." *ngSwitchCase="'running'">
                           <i class="fas fa-pause"></i>
                         </a>
-                        <a class="btn disabled" (click)='vmOperations("pause", thisVM.namespace, thisVM.name)' title="Pause..." *ngSwitchDefault>
+                        <a class="btn disabled" (click)='vmOperations("pause", thisVM.namespace, thisVM.name)' i18n-title title="Pause..." *ngSwitchDefault>
                           <i class="fas fa-pause disabled"></i>
                         </a>
                       </span>
                     <!--- PLAY BUTTON -->
                     <span [ngSwitch]="thisVM.status">
-                      <a class="btn" (click)='vmOperations("unpause", thisVM.namespace, thisVM.name)' title="Resume..." *ngSwitchCase="'paused'">
+                      <a class="btn" (click)='vmOperations("unpause", thisVM.namespace, thisVM.name)' i18n-title title="Resume..." *ngSwitchCase="'paused'">
                         <i class="fas fa-play"></i>
                       </a>
-                      <a class="btn disabled" (click)='vmOperations("unpause", thisVM.namespace, thisVM.name)' title="Resume..." *ngSwitchDefault>
+                      <a class="btn disabled" (click)='vmOperations("unpause", thisVM.namespace, thisVM.name)' i18n-title title="Resume..." *ngSwitchDefault>
                         <i class="fas fa-play disabled"></i>
                       </a>
                     </span>
                     <!--- VNC BUTTON -->
                     <span [ngSwitch]="thisVM.status">
-                      <a class="btn" (click)='openNoVNC(thisVM.namespace, thisVM.name)' title="Open console..." *ngSwitchCase="'running'">
+                      <a class="btn" (click)='openNoVNC(thisVM.namespace, thisVM.name)' i18n-title title="Open console..." *ngSwitchCase="'running'">
                         <i class="fas fa-desktop"></i>
                       </a>
-                      <a class="btn disabled" (click)='openNoVNC(thisVM.namespace, thisVM.name)' title="Open console..." *ngSwitchDefault>
+                      <a class="btn disabled" (click)='openNoVNC(thisVM.namespace, thisVM.name)' i18n-title title="Open console..." *ngSwitchDefault>
                         <i class="fas fa-desktop disabled"></i>
                       </a>
                     </span>
@@ -102,7 +102,7 @@
                           <a class="btn" (click)="showResize(thisVM.name, thisVM.namespace, thisVM.sockets, thisVM.cores, thisVM.threads, thisVM.memory)" title="Config..." *ngSwitchCase="'custom'">
                             <i class="fas fa-cog"></i>
                           </a>
-                          <a class="btn" (click)="showType(thisVM.name, thisVM.namespace)" title="Config..." *ngSwitchDefault>
+                          <a class="btn" (click)="showType(thisVM.name, thisVM.namespace)" i18n-title title="Config..." *ngSwitchDefault>
                             <i class="fas fa-cog"></i>
                           </a>
                           </span>
@@ -110,37 +110,37 @@
                     </span>
                     <!--- POWER ON BUTTON -->
                     <span [ngSwitch]="thisVM.running">
-                      <a class="btn disabled" (click)='vmOperations("start", thisVM.namespace, thisVM.name)' title="Power on..." *ngSwitchCase="true">
+                      <a class="btn disabled" (click)='vmOperations("start", thisVM.namespace, thisVM.name)' i18n-title title="Power on..." *ngSwitchCase="true">
                         <i class="fas fa-plug disabled"></i>
                       </a>
-                      <a class="btn" (click)='vmOperations("start", thisVM.namespace, thisVM.name)' title="Power on..." *ngSwitchDefault>
+                      <a class="btn" (click)='vmOperations("start", thisVM.namespace, thisVM.name)' i18n-title title="Power on..." *ngSwitchDefault>
                         <i class="fas fa-plug"></i>
                       </a>
                     </span>
                     <!--- POWER OFF BUTTON -->
                     <span [ngSwitch]="thisVM.running">
-                      <a class="btn" (click)='vmOperations("stop", thisVM.namespace, thisVM.name)' title="Power off..." *ngSwitchCase="true">
+                      <a class="btn" (click)='vmOperations("stop", thisVM.namespace, thisVM.name)' i18n-title title="Power off..." *ngSwitchCase="true">
                         <i class="fas fa-power-off"></i>
                       </a>
-                      <a class="btn disabled" (click)='vmOperations("stop", thisVM.namespace, thisVM.name)' title="Power off..." *ngSwitchDefault>
+                      <a class="btn disabled" (click)='vmOperations("stop", thisVM.namespace, thisVM.name)' i18n-title title="Power off..." *ngSwitchDefault>
                         <i class="fas fa-power-off disabled"></i>
                       </a>
                     </span>
                     <!--- RESTART BUTTON -->
                     <span [ngSwitch]="thisVM.running">
-                      <a class="btn" (click)='vmOperations("reboot", thisVM.namespace, thisVM.name)' title="Restart..." *ngSwitchCase="true">
+                      <a class="btn" (click)='vmOperations("reboot", thisVM.namespace, thisVM.name)' i18n-title title="Restart..." *ngSwitchCase="true">
                         <i class="fas fa-redo"></i>
                       </a>
-                      <a class="btn disabled" (click)='vmOperations("reboot", thisVM.namespace, thisVM.name)' title="Restart..." *ngSwitchDefault>
+                      <a class="btn disabled" (click)='vmOperations("reboot", thisVM.namespace, thisVM.name)' i18n-title title="Restart..." *ngSwitchDefault>
                         <i class="fas fa-redo disabled"></i>
                       </a>
                     </span>
                      <!--- DELETE BUTTON -->
                      <span [ngSwitch]="thisVM.running">
-                      <a class="btn disabled" (click)="showDelete(thisVM.name, thisVM.namespace)" title="Delete..." *ngSwitchCase="true">
+                      <a class="btn disabled" (click)="showDelete(thisVM.name, thisVM.namespace)" i18n-title title="Delete..." *ngSwitchCase="true">
                         <i class="fas fa-trash disabled"></i>
                       </a>
-                      <a class="btn" (click)="showDelete(thisVM.name, thisVM.namespace)" title="Delete..." *ngSwitchDefault>
+                      <a class="btn" (click)="showDelete(thisVM.name, thisVM.namespace)" i18n-title title="Delete..." *ngSwitchDefault>
                         <i class="fas fa-trash"></i>
                       </a>
                     </span>
@@ -250,25 +250,25 @@
                         <option>Value 1</option>
                     </select>
                     <div class="pane fade" id="custom-cpu-memory" name="custom-cpu-memory" style="display: none;" aria-hidden="true">
-                        <label for="newvm-cpumem-sockets">Sockets:</label>
+                        <label for="newvm-cpumem-sockets" i18n>Sockets:</label>
                         <input #newvmcpumemsockets type="number" class="form-control" id="newvm-cpumem-sockets" name="newvm-cpumem-sockets">
-                        <label for="newvm-cpumem-cores">Cores:</label>
+                        <label for="newvm-cpumem-cores" i18n>Cores:</label>
                         <input #newvmcpumemcores type="number" class="form-control" id="newvm-cpumem-cores" name="newvm-cpumem-cores">
-                        <label for="newvm-cpumem-threads">Threads:</label>
+                        <label for="newvm-cpumem-threads" i18n>Threads:</label>
                         <input #newvmcpumemthreads type="number" class="form-control" id="newvm-cpumem-threads" name="newvm-cpumem-threads">
-                        <label for="newvm-cpumem-memory">Memory (in GB):</label>
+                        <label for="newvm-cpumem-memory" i18n>Memory (in GB):</label>
                         <input #newvmcpumemmemory type="number" class="form-control" id="newvm-cpumem-memory" name="newvm-cpumem-memory">
                     </div>
-                    <label for="newvm-priorityclass">Priority Class:</label>
+                    <label for="newvm-priorityclass" i18n>Priority Class:</label>
                     <select #newvmpc class="custom-select rounded-0" name="newvm-pc" id="newvm-pc">
                         <option>Value 1</option>
                     </select>
-                    <label for="newvm-firmware">Firmware:</label>
+                    <label for="newvm-firmware" i18n>Firmware:</label>
                     <select #newvmfirmware class="custom-select rounded-0" name="newvm-firmware" id="newvm-firmware" (change)="onChangeFirmware(newvmfirmware.value)">
                         <option value="bios" selected>BIOS</option>
                         <option value="uefi">UEFI</option>
                     </select>
-                    <label for="newvm-secureboot">Secure Boot:</label>
+                    <label for="newvm-secureboot" i18n>Secure Boot:</label>
                     <select #newvmsecureboot class="custom-select rounded-0" name="newvm-secureboot" id="newvm-secureboot" disabled>
                         <option value="false" selected>false</option>
                         <option value="true">true</option>
@@ -276,7 +276,7 @@
                   </div>
                   <!-- DISK TAB -->
                   <div class="tab-pane fade" id="newvm-disks" role="tabpanel" aria-labelledby="newvm-disks-tab">
-                    <label for="disk1div">Disk 1:</label>
+                    <label for="disk1div" i18n>Disk 1:</label>
                     <div class="row">
                       <div class="col-2" name="newvm-diskone-type-col">
                         <label for="newvm-diskonetype">Type:</label>
@@ -288,12 +288,12 @@
                         </select>
                       </div>
                       <div class="col-2">
-                        <label for="newvm-diskonesc">Storage Class:</label>
+                        <label for="newvm-diskonesc" i18n>Storage Class:</label>
                         <select #newvmdiskonesc class="custom-select rounded-0" name="newvm-diskonesc" id="newvm-diskonesc">
                         </select>
                       </div>
                       <div class="col-2">
-                        <label for="newvm-diskoneam">Access Mode:</label>
+                        <label for="newvm-diskoneam" i18n>Access Mode:</label>
                         <select #newvmdiskoneam class="custom-select rounded-0" name="newvm-diskoneam" id="newvm-diskoneam">
                             <option>ReadWriteOnce</option>
                             <option>ReadOnlyMany</option>
@@ -301,29 +301,29 @@
                         </select>
                       </div>
                       <div class="col-3">
-                        <label for="newvm-diskonevalue">Value:</label>
+                        <label for="newvm-diskonevalue" i18n>Value:</label>
                         <select #newvmdiskonevalue class="custom-select rounded-0" name="newvm-diskonevalue" id="newvm-diskonevalue" disabled>
                         </select>
                       </div>
                       <div class="col-1">
-                        <label for="newvm-diskonesize">Size in GB:</label>
+                        <label for="newvm-diskonesize" i18n>Size in GB:</label>
                         <input #newvmdiskonesize type=number class="form-control" id="newvm-diskonesize" disabled>
                       </div>
                       <div class="col-2">
-                          <label for="newvm-diskonecm">Cache Mode:</label>
+                          <label for="newvm-diskonecm" i18n>Cache Mode:</label>
                           <select #newvmdiskonecm class="custom-select rounded-0" name="newvm-diskonecm" id="newvm-diskonecm">
                             <option value="">Automatic</option>
                             <option value="none">None</option>
-                            <option value="writethrough">WriteThrough</option>
+                            <option value="writethrough" i18n>WriteThrough</option>
                             <option value="writeback">WriteBack</option>
                           </select>
                       </div>
                     </div>
                     <br>
-                    <label for="disk2div">Disk 2:</label>
+                    <label for="disk2div" i18n>Disk 2:</label>
                     <div class="row">
                       <div class="col-2" name="newvm-diskone-type-col">
-                          <label for="newvm-disktwotype">Type:</label>
+                          <label for="newvm-disktwotype" i18n>Type:</label>
                           <select #newvmdisktwotype class="custom-select rounded-0" name="newvm-disktwotype" id="newvm-disktwotype" (change)="onChangeDiskTwo(newvmdisktwotype.value,newvmnamespace.value)">
                             <option value="none">None</option>
                             <option value="blank">Blank Disk</option>
@@ -332,12 +332,12 @@
                           </select>
                         </div>
                         <div class="col-2">
-                          <label for="newvm-disktwosc">Storage Class:</label>
+                          <label for="newvm-disktwosc" i18n>Storage Class:</label>
                           <select #newvmdisktwosc class="custom-select rounded-0" name="newvm-disktwosc" id="newvm-disktwosc">
                           </select>
                         </div>
                         <div class="col-2">
-                            <label for="newvm-disktwoam">Access Mode:</label>
+                            <label for="newvm-disktwoam" i18n>Access Mode:</label>
                             <select #newvmdisktwoam class="custom-select rounded-0" name="newvm-disktwoam" id="newvm-disktwoam">
                                 <option>ReadWriteOnce</option>
                                 <option>ReadOnlyMany</option>
@@ -345,16 +345,16 @@
                             </select>
                         </div>
                         <div class="col-3">
-                            <label for="newvm-disktwovalue">Value:</label>
+                            <label for="newvm-disktwovalue" i18n>Value:</label>
                             <select #newvmdisktwovalue class="custom-select rounded-0" name="newvm-disktwovalue" id="newvm-disktwovalue" disabled>
                             </select>
                         </div>
                         <div class="col-1">
-                          <label for="newvm-disktwosize">Size in GB:</label>
+                          <label for="newvm-disktwosize" i18n>Size in GB:</label>
                           <input #newvmdisktwosize type=number class="form-control" id="newvm-disktwosize" disabled>
                         </div>
                         <div class="col-2">
-                          <label for="newvm-disktwocm">Cache Mode:</label>
+                          <label for="newvm-disktwocm" i18n>Cache Mode:</label>
                           <select #newvmdisktwocm class="custom-select rounded-0" name="newvm-disktwocm" id="newvm-disktwocm">
                             <option value="">Automatic</option>
                             <option value="none">None</option>
@@ -366,24 +366,24 @@
                   </div>
                   <!-- NETWORK TAB -->
                   <div class="tab-pane fade" id="newvm-net" role="tabpanel" aria-labelledby="newvm-net-tab">
-                    <label for="newvm-networkone">NIC 1</label><br>
-                    <label for="newvm-networkone">Network:</label>
+                    <label for="newvm-networkone" i18n>NIC 1</label><br>
+                    <label for="newvm-networkone" i18n>Network:</label>
                     <select #newvmnetworkone class="custom-select rounded-0" name="newvm-networkone" id="newvm-networkone" (change)="onChangeNetworkOne(newvmnetworkone.value)">
                         <option value=podNetwork>podNetwork</option>
                     </select>
-                    <label for="newvm-networktypeone">Type:</label>
+                    <label for="newvm-networktypeone" i18n>Type:</label>
                     <select #newvmnetworktypeone class="custom-select rounded-0" name="newvm-networktypeone" id="newvm-networktypeone">
                         <option value=bridge>bridge</option>
                         <option value=masquerade>masquerade</option>
                     </select>
                     <br><br>
-                    <label for="newvm-networktwo">NIC 2</label><br>
-                    <label for="newvm-networktwo">Network:</label>
+                    <label for="newvm-networktwo" i18n>NIC 2</label><br>
+                    <label for="newvm-networktwo" i18n>Network:</label>
                     <select #newvmnetworktwo class="custom-select rounded-0" name="newvm-networktwo" id="newvm-networktwo"  (change)="onChangeNetworkTwo(newvmnetworktwo.value)">
                         <option value=none selected>None</option>
                         <option value=podNetwork>podNetwork</option>
                     </select>
-                    <label for="newvm-networktypetwo">Type:</label>
+                    <label for="newvm-networktypetwo" i18n>Type:</label>
                     <select #newvmnetworktypetwo class="custom-select rounded-0" name="newvm-networktypetwo" id="newvm-networktypetwo">
                         <option value=bridge>bridge</option>
                         <option value=masquerade>masquerade</option>
@@ -391,19 +391,19 @@
                   </div>
                   <!-- USERDATA TAB -->
                   <div class="tab-pane fade" id="newvm-userdata" role="tabpanel" aria-labelledby="newvm-userdata-tab">
-                    <label for="newvm-userdata-username">Username:</label>
+                    <label for="newvm-userdata-username" i18n>Username:</label>
                     <input #newvmuserdatausername type="text" class="form-control" id="newvm-userdata-username" name="newvm-userdata-username">
-                    <label for="newvm-userdata-auth">Authentication:</label>
+                    <label for="newvm-userdata-auth" i18n>Authentication:</label>
                     <select #newvmuserdataauth class="custom-select rounded-0" name="newvm-userdata-auth" id="newvm-userdata-auth" (change)="onChangeAuthType(newvmuserdataauth.value, newvmnamespace.value)">
-                      <option value="password">User/Password</option>
+                      <option value="password" i18n>User/Password</option>
                       <option value="ssh">SSH Private Key</option>
                     </select>
                     <div class="pane fade show" id="newvm-userdata-password-panel" name="newvm-userdata-password-panel" style="display: contents;" aria-hidden="false">
-                        <label for="newvm-userdata-password">Password:</label>
+                        <label for="newvm-userdata-password" i18n>Password:</label>
                         <input #newvmuserdatapassword type="password" class="form-control" id="newvm-userdata-password" name="newvm-userdata-password">
                     </div>
                     <div class="pane fade" id="newvm-userdata-ssh-panel" name="newvm-userdata-ssh-panel" style="display: none;" aria-hidden="true">
-                        <label for="newvm-userdata-ssh">SSH Key:</label>
+                        <label for="newvm-userdata-ssh" i18n>SSH Key:</label>
                         <select #newvmuserdatassh class="custom-select rounded-0" name="newvm-userdata-ssh" id="newvm-userdata-ssh">
                             <option>Loading...</option>
                         </select>
@@ -411,15 +411,15 @@
                   </div>
                   <!-- NETWORK DATA TAB -->
                   <div class="tab-pane fade" id="newvm-netdata" role="tabpanel" aria-labelledby="newvm-netdata-tab">
-                    <label for="newvm-netdata-ip">NIC1 IP:</label>
+                    <label for="newvm-netdata-ip" i18n>NIC1 IP:</label>
                     <input #newvmnetdataip type="text" class="form-control" id="newvm-netdata-ip" name="newvm-netdata-ip">
-                    <label for="newvm-netdata-netmask">NIC1 Netmask:</label>
+                    <label for="newvm-netdata-netmask" i18n>NIC1 Netmask:</label>
                     <input #newvmnetdatanetmask type="text" class="form-control" id="newvm-netdata-netmask" name="newvm-netdata-netmask">
-                    <label for="newvm-netdata-gw">NIC1 Gateway:</label>
+                    <label for="newvm-netdata-gw" i18n>NIC1 Gateway:</label>
                     <input #newvmnetdatagw type="text" class="form-control" id="newvm-netdata-gw" name="newvm-netdata-gw">
-                    <label for="newvm-netdata-dns1">DNS 1:</label>
+                    <label for="newvm-netdata-dns1" i18n>DNS 1:</label>
                     <input #newvmnetdatadns1 type="text" class="form-control" id="newvm-netdata-dns1" name="newvm-netdata-dns1">
-                    <label for="newvm-netdata-dns2">DNS 2:</label>
+                    <label for="newvm-netdata-dns2" i18n>DNS 2:</label>
                     <input #newvmnetdatadns2 type="text" class="form-control" id="newvm-netdata-dns2" name="newvm-netdata-dns2">
                   </div>
                   <!-- INIT SCRIPT -->
@@ -432,8 +432,8 @@
             </div>
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-newvm")'>Close</button>
-            <button type="button" class="btn btn-primary" (click)="applyNewVm(newvmname.value, newvmnamespace.value, newvmnode.value, newvmlabelkeyone.value, newvmlabelvalueone.value, newvmlabelkeytwo.value, newvmlabelvaluetwo.value, newvmlabelkeythree.value, newvmlabelvaluethree.value, newvmlabelkeyfour.value, newvmlabelvaluefour.value, newvmlabelkeyfive.value, newvmlabelvaluefive.value, newvmtype.value, newvmcpumemsockets.value, newvmcpumemcores.value, newvmcpumemthreads.value, newvmcpumemmemory.value, newvmpc.value, newvmfirmware.value, newvmsecureboot.value, newvmdiskonetype.value, newvmdiskonevalue.value, newvmdiskonesize.value, newvmdiskonesc.value, newvmdiskoneam.value, newvmdiskonecm.value, newvmdisktwotype.value, newvmdisktwovalue.value, newvmdisktwosize.value, newvmdisktwosc.value, newvmdisktwoam.value, newvmdisktwocm.value, newvmnetworkone.value, newvmnetworktypeone.value, newvmnetworktwo.value, newvmnetworktypetwo.value, newvmuserdatausername.value, newvmuserdataauth.value, newvmuserdatapassword.value, newvmuserdatassh.value, newvmnetdataip.value, newvmnetdatanetmask.value, newvmnetdatagw.value, newvmnetdatadns1.value, newvmnetdatadns2.value, newpoolinitscript.value)">Create</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-newvm")' i18n>Close</button>
+            <button type="button" class="btn btn-primary" (click)="applyNewVm(newvmname.value, newvmnamespace.value, newvmnode.value, newvmlabelkeyone.value, newvmlabelvalueone.value, newvmlabelkeytwo.value, newvmlabelvaluetwo.value, newvmlabelkeythree.value, newvmlabelvaluethree.value, newvmlabelkeyfour.value, newvmlabelvaluefour.value, newvmlabelkeyfive.value, newvmlabelvaluefive.value, newvmtype.value, newvmcpumemsockets.value, newvmcpumemcores.value, newvmcpumemthreads.value, newvmcpumemmemory.value, newvmpc.value, newvmfirmware.value, newvmsecureboot.value, newvmdiskonetype.value, newvmdiskonevalue.value, newvmdiskonesize.value, newvmdiskonesc.value, newvmdiskoneam.value, newvmdiskonecm.value, newvmdisktwotype.value, newvmdisktwovalue.value, newvmdisktwosize.value, newvmdisktwosc.value, newvmdisktwoam.value, newvmdisktwocm.value, newvmnetworkone.value, newvmnetworktypeone.value, newvmnetworktwo.value, newvmnetworktypetwo.value, newvmuserdatausername.value, newvmuserdataauth.value, newvmuserdatapassword.value, newvmuserdatassh.value, newvmnetdataip.value, newvmnetdatanetmask.value, newvmnetdatagw.value, newvmnetdatadns1.value, newvmnetdatadns2.value, newpoolinitscript.value)" i18n>Create</button>
           </div>
         </form>
         </div>
@@ -460,8 +460,8 @@
             <p>BODY_TEMPLATE</p>
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")'>Close</button>
-            <button type="button" class="btn btn-danger" (click)="applyDelete()">Delete</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")' i18n>Close</button>
+            <button type="button" class="btn btn-danger" (click)="applyDelete()" i18n>Delete</button>
           </div>
         </div>
         <!-- /.modal-content -->
@@ -484,14 +484,14 @@
           <input type="hidden" id="type-vm" name="type-vm" value="">
           <input type="hidden" id="type-namespace" name="type-namespace" value="">
           <div class="modal-body" id="type-value">
-            <label for="newType">Virtual Machine Type:</label>
+            <label for="newType" i18n>Virtual Machine Type:</label>
             <select #changevmtype class="custom-select rounded-0" name="changevm-type" id="changevm-type">
                 <option>Value 1</option>
             </select>
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")'>Close</button>
-            <button type="button" class="btn btn-primary" (click)="applyType(changevmtype.value)">Save changes</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")' i18n>Close</button>
+            <button type="button" class="btn btn-primary" (click)="applyType(changevmtype.value)" i18n>Save changes</button>
           </div>
         </div>
         <!-- /.modal-content -->
@@ -514,18 +514,18 @@
           <div class="modal-body" id="resize-value">
             <input #resizeName type="hidden" id="resize-name" name="resize-name" value="">
             <input #resizeNamespace type="hidden" id="resize-namespace" name="resize-namespace" value="">
-            <label for="fileInput">Sockets:</label>
+            <label for="fileInput" i18n>Sockets:</label>
             <input #resizeSockets type="number" class="form-control" id="resize-sockets" name="resize-sockets">
-            <label for="fileInput">Cores:</label>
+            <label for="fileInput" i18n>Cores:</label>
             <input #resizeCores type="number" class="form-control" id="resize-cores" name="resize-cores">
-            <label for="fileInput">Threads:</label>
+            <label for="fileInput" i18n>Threads:</label>
             <input #resizeThreads type="number" class="form-control" id="resize-threads" name="resize-threas">
-            <label for="fileInput">Memory (in GB):</label>
+            <label for="fileInput" i18n>Memory (in GB):</label>
             <input #resizeMemory type="number" class="form-control" id="resize-memory" name="resize-memory">
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")'>Close</button>
-            <button type="button" class="btn btn-primary" (click)="applyResize(resizeSockets.value, resizeCores.value, resizeThreads.value, resizeMemory.value)">Save changes</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")' i18n>Close</button>
+            <button type="button" class="btn btn-primary" (click)="applyResize(resizeSockets.value, resizeCores.value, resizeThreads.value, resizeMemory.value)" i18n>Save changes</button>
           </div>
         </div>
         <!-- /.modal-content -->

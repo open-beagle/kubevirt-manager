@@ -9,6 +9,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "zh": "./src/locale/messages.zh.xlf"
+        },
+        "sourceLocale": "en-US"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -32,7 +38,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "browser": "src/main.ts",
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {
@@ -62,13 +68,17 @@
                   "inlineCritical": false
                 },
                 "fonts": true
-              }
+              },
+              "localize": ["zh"],
+              "aot": true
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": ["zh"],
+              "aot": true
             }
           },
           "defaultConfiguration": "production"
@@ -110,5 +120,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "025019e6-2997-48b9-823d-fad53ad6c7ac"
   }
 }

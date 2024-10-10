@@ -12,63 +12,63 @@
             <div class="card">
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#overview" data-toggle="tab">Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kube" data-toggle="tab">Kubernetes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services" data-toggle="tab">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#controlplane" data-toggle="tab">Control Plane</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pools" data-toggle="tab">Worker Pools</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#overview" data-toggle="tab" i18n>Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kube" data-toggle="tab" i18n>Kubernetes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" data-toggle="tab" i18n>Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#controlplane" data-toggle="tab" i18n>Control Plane</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pools" data-toggle="tab" i18n>Worker Pools</a></li>
                   </ul>
                 </div>
                 <div class="card-body">
                   <div class="tab-content">
                     <!-- Overview -->
                     <div class="active tab-pane" id="overview">
-                        <dt>General</dt>
+                        <dt i18n>General</dt>
                         <br>
-                        <dd>Name: {{activeCluster.name}} </dd>
-                        <dd>Namespace: {{activeCluster.namespace}} </dd>
-                        <dd>SSH Private Key (capk user): <a href="javascript:void(0);" (click)="getSSHKey(activeCluster.namespace, activeCluster.name)" title="Download SSH Key...">download</a></dd>
+                        <dd><ng-container i18n>Name:</ng-container> {{activeCluster.name}} </dd>
+                        <dd><ng-container i18n>Namespace:</ng-container> {{activeCluster.namespace}} </dd>
+                        <dd><ng-container i18n>SSH Private Key (capk user):</ng-container> <a href="javascript:void(0);" (click)="getSSHKey(activeCluster.namespace, activeCluster.name)" title="Download SSH Key...">download</a></dd>
                         <hr>
-                        <dt>Control Plane</dt>
+                        <dt><ng-container i18n>Control Plane</ng-container></dt>
                         <br>
-                        <dd>Initialized: {{activeCluster.controlPlane.initialized}}</dd>
-                        <dd>Master Pools: 1 </dd>
-                        <dd>Total Master Nodes: {{activeCluster.controlPlane.replicas}} </dd>
+                        <dd><ng-container i18n>Initialized:</ng-container> {{activeCluster.controlPlane.initialized}}</dd>
+                        <dd><ng-container i18n>Master Pools:</ng-container> 1 </dd>
+                        <dd><ng-container i18n>Total Master Nodes:</ng-container> {{activeCluster.controlPlane.replicas}} </dd>
                         <hr>
-                        <dt>Workers</dt>
+                        <dt><ng-container i18n>Workers</ng-container></dt>
                         <br>
-                        <dd>Worker Pools: {{activeCluster.workerPools}} </dd>
-                        <dd>Total Worker Nodes: {{activeCluster.totalWorkers}} </dd>
+                        <dd><ng-container i18n>Worker Pools:</ng-container> {{activeCluster.workerPools}} </dd>
+                        <dd><ng-container i18n>Total Worker Nodes:</ng-container> {{activeCluster.totalWorkers}} </dd>
                         <hr>
-                        <dt>Status</dt>
+                        <dt><ng-container i18n>Status</ng-container></dt>
                         <br>
-                        <dd>Control Plane Ready: {{activeCluster.controlPlaneReady}} </dd>
-                        <dd>Infrastructure Ready: {{activeCluster.infrastructureReady}} </dd>
-                        <dd>Created At: {{activeCluster.creationTimestamp}} </dd>
+                        <dd><ng-container i18n>Control Plane Ready:</ng-container> {{activeCluster.controlPlaneReady}} </dd>
+                        <dd><ng-container i18n>Infrastructure Ready:</ng-container> {{activeCluster.infrastructureReady}} </dd>
+                        <dd><ng-container i18n>Created At:</ng-container> {{activeCluster.creationTimestamp}} </dd>
                     </div>
                     <!-- Kubernetes -->
                     <div class="tab-pane" id="kube">
-                        <dt>Kubernetes Config</dt>
+                        <dt><ng-container i18n>Kubernetes Config</ng-container></dt>
                         <br>
-                        <dd>Kubernetes Version: {{activeCluster.controlPlane.version}} </dd>
-                        <dd>Kubeconfig file: <a href="javascript:void(0);" (click)="getKubeconfig(activeCluster.namespace, activeCluster.name)" title="Download Kubeconfig...">download</a></dd>
-                        <dd>Kubernetes API Endpoint: {{activeCluster.cpHost}}:{{activeCluster.cpPort}}</dd>
-                        <dd>Container Network Interface: {{activeCluster.cniPlugin}} </dd>
-                        <dd>Container Network Interface Version: {{activeCluster.cniPluginVersion}} </dd>
-                        <dd>Container Network Interface VXLAN Tunnel Port: {{activeCluster.cniVXLANPort}} </dd>
-                        <dd>Cluster Autoscaler: {{activeCluster.clusterAutoscaler}} </dd>
-                        <dd>IPv4 Pod CIDRs: {{activeCluster.podCidrs}} </dd>
-                        <dd>IPv4 Service CIDRs: {{activeCluster.svcCidrs}} </dd>
-                        <dd>Cluster DNS Domain: {{activeCluster.controlPlane.dnsDomain}}</dd>
+                        <dd><ng-container i18n>Kubernetes Version:</ng-container> {{activeCluster.controlPlane.version}} </dd>
+                        <dd><ng-container i18n>Kubeconfig file:</ng-container> <a href="javascript:void(0);" (click)="getKubeconfig(activeCluster.namespace, activeCluster.name)" title="Download Kubeconfig...">download</a></dd>
+                        <dd><ng-container i18n>Kubernetes API Endpoint:</ng-container> {{activeCluster.cpHost}}:{{activeCluster.cpPort}}</dd>
+                        <dd><ng-container i18n>Container Network Interface:</ng-container> {{activeCluster.cniPlugin}} </dd>
+                        <dd><ng-container i18n>Container Network Interface Version:</ng-container> {{activeCluster.cniPluginVersion}} </dd>
+                        <dd><ng-container i18n>Container Network Interface VXLAN Tunnel Port:</ng-container> {{activeCluster.cniVXLANPort}} </dd>
+                        <dd><ng-container i18n>Cluster Autoscaler:</ng-container> {{activeCluster.clusterAutoscaler}} </dd>
+                        <dd><ng-container i18n>IPv4 Pod CIDRs:</ng-container> {{activeCluster.podCidrs}} </dd>
+                        <dd><ng-container i18n>IPv4 Service CIDRs:</ng-container> {{activeCluster.svcCidrs}} </dd>
+                        <dd><ng-container i18n>Cluster DNS Domain:</ng-container> {{activeCluster.controlPlane.dnsDomain}}</dd>
                         <hr>
-                        <dt>Features</dt>
+                        <dt i18n>Features</dt>
                         <br>
-                        <dd>Cert Manager: {{activeCluster.features.certManager}}</dd>
-                        <dd>Kubernetes Dashboard: {{activeCluster.features.kubeDashboard}}</dd>
-                        <dd>Metrics Server: {{activeCluster.features.metricsServer}}</dd>
-                        <dd>HAProxy Ingress: {{activeCluster.features.haproxyIngress}}</dd>
-                        <dd>NGINX Ingress: {{activeCluster.features.nginxIngress}}</dd>
-                        <dd>Tekton + Tekton Dashboard: {{activeCluster.features.tekton}}</dd>
+                        <dd><ng-container i18n>Cert Manager:</ng-container> {{activeCluster.features.certManager}}</dd>
+                        <dd><ng-container i18n>Kubernetes Dashboard:</ng-container> {{activeCluster.features.kubeDashboard}}</dd>
+                        <dd><ng-container i18n>Metrics Server:</ng-container> {{activeCluster.features.metricsServer}}</dd>
+                        <dd><ng-container i18n>HAProxy Ingress:</ng-container> {{activeCluster.features.haproxyIngress}}</dd>
+                        <dd><ng-container i18n>NGINX Ingress:</ng-container> {{activeCluster.features.nginxIngress}}</dd>
+                        <dd><ng-container i18n>Tekton + Tekton Dashboard:</ng-container> {{activeCluster.features.tekton}}</dd>
                     </div>
                     <!-- Services -->
                     <div class="tab-pane" id="services">
@@ -76,14 +76,14 @@
                             <thead>
                               <tr>
                                 <th style="width: 10px">&nbsp;</th>
-                                <th style="width: 40px">Name</th>
-                                <th style="width: 20px">Type</th>
-                                <th style="width: 20px">ClusterIP</th>
-                                <th style="width: 20px">Load Balancer</th>
-                                <th style="width: 20px">Protocol</th>
-                                <th style="width: 20px">Port</th>
-                                <th style="width: 80px">Target Port</th>
-                                <th style="width: 220px">Target Resource</th>
+                                <th style="width: 40px" i18n>Name</th>
+                                <th style="width: 20px" i18n>Type</th>
+                                <th style="width: 20px" i18n>ClusterIP</th>
+                                <th style="width: 20px" i18n>Load Balancer</th>
+                                <th style="width: 20px" i18n>Protocol</th>
+                                <th style="width: 20px" i18n>Port</th>
+                                <th style="width: 80px" i18n>Target Port</th>
+                                <th style="width: 220px" i18n>Target Resource</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -394,37 +394,37 @@
               </button>
             </div>
             <div class="modal-body" id="config-cp-value">
-                        <label for="config-controlplane-type">Virtual Machine Type:</label>
+                        <label for="config-controlplane-type" i18n>Virtual Machine Type:</label>
                         <select #configcontrolplanetype class="custom-select rounded-0" name="config-controlplane-type" id="config-controlplane-type" (change)="onChangeControlPlaneType(configcontrolplanetype.value)">
                           <option>Value 1</option>
                         </select>
                         <div class="pane fade" id="config-custom-cpu-memory" name="config-custom-cpu-memory" style="display: none;" aria-hidden="true">
-                          <label for="config-controlplane-cpumem-sockets">Sockets:</label>
+                          <label for="config-controlplane-cpumem-sockets" i18n>Sockets:</label>
                           <input #configcontrolplanecpumemsockets type="number" class="form-control" id="config-controlplane-cpumem-sockets" name="config-controlplane-cpumem-sockets">
-                          <label for="config-controlplane-cpumem-cores">Cores:</label>
+                          <label for="config-controlplane-cpumem-cores" i18n>Cores:</label>
                           <input #configcontrolplanecpumemcores type="number" class="form-control" id="config-controlplane-cpumem-cores" name="config-controlplane-cpumem-cores">
-                          <label for="config-controlplane-cpumem-threads">Threads:</label>
+                          <label for="config-controlplane-cpumem-threads" i18n>Threads:</label>
                           <input #configcontrolplanecpumemthreads type="number" class="form-control" id="config-controlplane-cpumem-threads" name="config-controlplane-cpumem-threads">
-                          <label for="config-controlplane-cpumem-memory">Memory (in GB):</label>
+                          <label for="config-controlplane-cpumem-memory" i18n>Memory (in GB):</label>
                           <input #configcontrolplanecpumemmemory type="number" class="form-control" id="config-controlplane-cpumem-memory" name="config-controlplane-cpumem-memory">
                         </div>
-                        <label for="config-controlplane-priorityclass">Priority Class:</label>
+                        <label for="config-controlplane-priorityclass" i18n>Priority Class:</label>
                         <select #configcontrolplanepc class="custom-select rounded-0" name="config-controlplane-pc" id="config-controlplane-pc">
                           <option>Value 1</option>
                         </select>
-                        <label for="config-controlplane-disk">Boot Disk</label>
+                        <label for="config-controlplane-disk" i18n>Boot Disk</label>
                         <div class="row">
                             <div class="col-3">
-                                <label for="config-controlplane-disksize">Size in GB:</label>
+                                <label for="config-controlplane-disksize" i18n>Size in GB:</label>
                                 <input #configcontrolplanedisksize type=number class="form-control" name="config-controlplane-disksize" id="config-controlplane-disksize" placeholder="100">
                             </div>
                             <div class="col-3">
-                                <label for="config-controlplane-disksc">Storage Class:</label>
+                                <label for="config-controlplane-disksc" i18n>Storage Class:</label>
                                 <select #configcontrolplanedisksc class="custom-select rounded-0" name="config-controlplane-disksc" id="config-controlplane-disksc">
                                 </select>
                             </div>
                             <div class="col-3">
-                                <label for="config-controlplane-diskam">Access Mode:</label>
+                                <label for="config-controlplane-diskam" i18n>Access Mode:</label>
                                 <select #configcontrolplanediskam class="custom-select rounded-0" name="config-controlplane-diskam" id="config-controlplane-diskam">
                                     <option>ReadWriteOnce</option>
                                     <option>ReadOnlyMany</option>
@@ -432,7 +432,7 @@
                                 </select>
                             </div>
                             <div class="col-3">
-                                <label for="config-controlplane-diskcm">Cache Mode:</label>
+                                <label for="config-controlplane-diskcm" i18n>Cache Mode:</label>
                                 <select #configcontrolplanediskcm class="custom-select rounded-0" name="config-controlplane-diskcm" id="config-controlplane-diskcm">
                                   <option value="">Automatic</option>
                                   <option value="none">None</option>
@@ -443,8 +443,8 @@
                         </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-config-cp")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)='applyControlPlaneConfig(configcontrolplanetype.value, configcontrolplanecpumemsockets.value, configcontrolplanecpumemcores.value, configcontrolplanecpumemthreads.value, configcontrolplanecpumemmemory.value, configcontrolplanepc.value, configcontrolplanedisksize.value, configcontrolplanedisksc.value, configcontrolplanediskam.value, configcontrolplanediskcm.value)'>Apply</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-config-cp")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)='applyControlPlaneConfig(configcontrolplanetype.value, configcontrolplanecpumemsockets.value, configcontrolplanecpumemcores.value, configcontrolplanecpumemthreads.value, configcontrolplanecpumemmemory.value, configcontrolplanepc.value, configcontrolplanedisksize.value, configcontrolplanedisksc.value, configcontrolplanediskam.value, configcontrolplanediskcm.value)' i18n>Apply</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -466,50 +466,50 @@
             </div>
             <div class="modal-body" id="new-wp-value">
                         <input #newnodepoolautoscaling type="hidden" id="newnodepool-autoscaling" name="newnodepool-autoscaling" value="false">
-                        <label for="newnodepool-name">Pool Name:</label>
+                        <label for="newnodepool-name" i18n>Pool Name:</label>
                         <input #newnodepoolname type="text" class="form-control" id="newnodepool-name" name="newnodepool-name" value="pool-name">
                         <div class="row">
                             <div class="col-6" name="newnodepool-linux-col">
-                              <label for="newnodepool-osdist">Operating System:</label>
+                              <label for="newnodepool-osdist" i18n>Operating System:</label>
                               <select #newnodepoolosdist class="custom-select rounded-0" name="newnodepool-osdist" id="newnodepool-osdist" (change)="onChangeNodePoolOS(newnodepoolosdist.value)">
                                 <option value="none">None</option>
                               </select>
                             </div>
                             <div class="col-6">
-                              <label for="newnodepool-osversion">OS Version:</label>
+                              <label for="newnodepool-osversion" i18n>OS Version:</label>
                               <select #newnodepoolosversion class="custom-select rounded-0" name="newnodepool-osversion" id="newnodepool-osversion">
                               </select>
                             </div>
                         </div>
                       <br> 
-                      <label for="newnodepool-type">Virtual Machine Type:</label>
+                      <label for="newnodepool-type" i18n>Virtual Machine Type:</label>
                       <select #newnodepooltype class="custom-select rounded-0" name="newnodepool-type" id="newnodepool-type" (change)="onChangeNodePoolType(newnodepooltype.value)">
                           <option>Value 1</option>
                       </select>
                       <div class="pane fade" id="nodepool-custom-cpu-memory" name="nodepool-custom-cpu-memory" style="display: none;" aria-hidden="true">
-                          <label for="newnodepool-cpumem-sockets">Sockets:</label>
+                          <label for="newnodepool-cpumem-sockets" i18n>Sockets:</label>
                           <input #newnodepoolcpumemsockets type="number" class="form-control" id="newnodepool-cpumem-sockets" name="newnodepool-cpumem-sockets">
-                          <label for="newnodepool-cpumem-cores">Cores:</label>
+                          <label for="newnodepool-cpumem-cores" i18n>Cores:</label>
                           <input #newnodepoolcpumemcores type="number" class="form-control" id="newnodepool-cpumem-cores" name="newnodepool-cpumem-cores">
-                          <label for="newnodepool-cpumem-threads">Threads:</label>
+                          <label for="newnodepool-cpumem-threads" i18n>Threads:</label>
                           <input #newnodepoolcpumemthreads type="number" class="form-control" id="newnodepool-cpumem-threads" name="newnodepool-cpumem-threads">
-                          <label for="newnodepool-cpumem-memory">Memory (in GB):</label>
+                          <label for="newnodepool-cpumem-memory" i18n>Memory (in GB):</label>
                           <input #newnodepoolcpumemmemory type="number" class="form-control" id="newnodepool-cpumem-memory" name="newnodepool-cpumem-memory">
                       </div>
-                      <label for="newnodepool-priorityclass">Priority Class:</label>
+                      <label for="newnodepool-priorityclass" i18n>Priority Class:</label>
                       <select #newnodepoolpc class="custom-select rounded-0" name="newnodepool-pc" id="newnodepool-pc">
                           <option>Value 1</option>
                       </select>
                       <div class="row">
                         <div class="col-6">
-                            <label for="newnodepool-firmware">Firmware:</label>
+                            <label for="newnodepool-firmware" i18n>Firmware:</label>
                             <select #newnodepoolfirmware class="custom-select rounded-0" name="newnodepool-firmware" id="newnodepool-firmware">
                                 <option value="bios" selected>BIOS</option>
                                 <option value="uefi">UEFI</option>
                             </select>
                         </div>
                         <div class="col-6">
-                            <label for="newnodepool-secureboot">Secure Boot:</label>
+                            <label for="newnodepool-secureboot" i18n>Secure Boot:</label>
                             <select #newnodepoolsecureboot class="custom-select rounded-0" name="newnodepool-secureboot" id="newnodepool-secureboot" disabled>
                                 <option value="false" selected>false</option>
                                 <option value="true">true</option>
@@ -518,32 +518,32 @@
                       </div>
                       <div class="row">
                           <div class="col-4">
-                            <label for="newnodepool-replicas">Number of Nodes:</label>
+                            <label for="newnodepool-replicas" i18n>Number of Nodes:</label>
                             <input #newnodepoolreplicas type="number" class="form-control" id="newnodepool-replicas" name="newnodepool-replicas">
                           </div>
                           <div class="col-4">
-                            <label for="newnodepool-minreplicas">Autoscaler Min Nodes:</label>
+                            <label for="newnodepool-minreplicas" i18n>Autoscaler Min Nodes:</label>
                             <input #newnodepoolminreplicas type=number class="form-control" name="newnodepool-minreplicas" id="newnodepool-minreplicas" placeholder="1" disabled>
                           </div>
                           <div class="col-4">
-                            <label for="newnodepool-maxreplicas">Autoscaler Max Nodes:</label>
+                            <label for="newnodepool-maxreplicas" i18n>Autoscaler Max Nodes:</label>
                             <input #newnodepoolmaxreplicas type=number class="form-control" name="newnodepool-maxreplicas" id="newnodepool-maxreplicas" placeholder="99" disabled>
                           </div>
                         </div>
                       <br>
-                      <label for="newnodepool-disk">Boot Disk</label>
+                      <label for="newnodepool-disk" i18n>Boot Disk</label>
                         <div class="row">
                             <div class="col-3">
-                                <label for="newnodepool-disksize">Size in GB:</label>
+                                <label for="newnodepool-disksize" i18n>Size in GB:</label>
                                 <input #newnodepooldisksize type=number class="form-control" name="newnodepool-disksize" id="newnodepool-disksize" placeholder="100">
                             </div>
                             <div class="col-3">
-                                <label for="newnodepool-disksc">Storage Class:</label>
+                                <label for="newnodepool-disksc" i18n>Storage Class:</label>
                                 <select #newnodepooldisksc class="custom-select rounded-0" name="newnodepool-disksc" id="newnodepool-disksc">
                                 </select>
                             </div>
                             <div class="col-3">
-                                <label for="newnodepool-diskam">Access Mode:</label>
+                                <label for="newnodepool-diskam" i18n>Access Mode:</label>
                                 <select #newnodepooldiskam class="custom-select rounded-0" name="newnodepool-diskam" id="newnodepool-diskam">
                                     <option>ReadWriteOnce</option>
                                     <option>ReadOnlyMany</option>
@@ -551,7 +551,7 @@
                                 </select>
                             </div>
                             <div class="col-3">
-                                <label for="newnodepool-diskcm">Cache Mode:</label>
+                                <label for="newnodepool-diskcm" i18n>Cache Mode:</label>
                                 <select #newnodepooldiskcm class="custom-select rounded-0" name="newnodepool-diskcm" id="nnewnodepool-diskcm">
                                   <option value="">Automatic</option>
                                   <option value="none">None</option>
@@ -562,8 +562,8 @@
                         </div>
                         <div class="row">&nbsp;</div>
                          <div class="modal-footer justify-content-between">
-                            <button type="button" class="btn btn-default" (click)='hideComponent("modal-newcluster")'>Close</button>
-                            <button type="button" class="btn btn-primary" (click)='createNodePoolRelatedObjects(newnodepoolautoscaling.value, newnodepoolname.value, newnodepoolosdist.value, newnodepoolosversion.value, newnodepooltype.value, newnodepoolcpumemsockets.value, newnodepoolcpumemcores.value, newnodepoolcpumemthreads.value, newnodepoolcpumemmemory.value, newnodepoolpc.value, newnodepoolreplicas.value, newnodepoolminreplicas.value, newnodepoolmaxreplicas.value, newnodepooldisksize.value, newnodepooldisksc.value, newnodepooldiskam.value, newnodepooldiskcm.value)'>Create</button>
+                            <button type="button" class="btn btn-default" (click)='hideComponent("modal-newcluster")' i18n>Close</button>
+                            <button type="button" class="btn btn-primary" (click)='createNodePoolRelatedObjects(newnodepoolautoscaling.value, newnodepoolname.value, newnodepoolosdist.value, newnodepoolosversion.value, newnodepooltype.value, newnodepoolcpumemsockets.value, newnodepoolcpumemcores.value, newnodepoolcpumemthreads.value, newnodepoolcpumemmemory.value, newnodepoolpc.value, newnodepoolreplicas.value, newnodepoolminreplicas.value, newnodepoolmaxreplicas.value, newnodepooldisksize.value, newnodepooldisksc.value, newnodepooldiskam.value, newnodepooldiskcm.value)' i18n>Create</button>
                         </div>
 
 

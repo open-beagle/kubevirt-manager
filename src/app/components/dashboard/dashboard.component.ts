@@ -81,7 +81,7 @@ export class DashboardComponent implements OnInit {
         this.loadPrometheus();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Dashboard");
+            navTitle.replaceChildren($localize`Dashboard`);
         }
     }
 

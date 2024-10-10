@@ -5,11 +5,11 @@
         <div class="card card-outline">
           <div class="card-header">
             <h3 class="card-title">
-              VM Pools
+              <ng-container i18n>VM Pools</ng-container>
             </h3>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" (click)='showNewPool()'>
-                  <i class="fas fa-plus-square" (click)='showNewPool()' title="Create pool..."></i>
+                  <i class="fas fa-plus-square" (click)='showNewPool()' i18n-title title="Create pool..."></i>
               </button>
             </div>
           </div>
@@ -20,15 +20,15 @@
                 <thead>
                     <tr>
                         <th style="width: 10px">&nbsp;</th>
-                        <th style="width: 130px">Namespace</th>
-                        <th style="width: 180px">Pool Name</th>
-                        <th style="width: 60px">VM Type</th>
-                        <th style="width: 18px">vCPU</th>
-                        <th style="width: 18px">Memory</th>
-                        <th style="width: 18px">Running</th>
-                        <th style="width: 25px">Replicas</th>
-                        <th style="width: 25px">Ready</th>
-                        <th style="width: 180px">Actions</th>
+                        <th style="width: 130px" i18n>Namespace</th>
+                        <th style="width: 180px" i18n>Pool Name</th>
+                        <th style="width: 60px" i18n>VM Type</th>
+                        <th style="width: 18px" i18n>vCPU</th>
+                        <th style="width: 18px" i18n>Memory</th>
+                        <th style="width: 18px" i18n>Running</th>
+                        <th style="width: 25px" i18n>Replicas</th>
+                        <th style="width: 25px" i18n>Ready</th>
+                        <th style="width: 180px" i18n>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -119,31 +119,31 @@
                   <!-- TABS Selector-->
                   <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="newpool-home-tab" data-toggle="pill" href="#newpool-home" role="tab" aria-controls="newpool-home" aria-selected="false">Basic</a>
+                      <a class="nav-link active" id="newpool-home-tab" data-toggle="pill" href="#newpool-home" role="tab" aria-controls="newpool-home" aria-selected="false" i18n>Basic</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="newpool-labels-tab" data-toggle="pill" href="#newpool-labels" role="tab" aria-controls="newpool-labels" aria-selected="false">Labels</a>
+                      <a class="nav-link" id="newpool-labels-tab" data-toggle="pill" href="#newpool-labels" role="tab" aria-controls="newpool-labels" aria-selected="false" i18n>Labels</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="newpool-cpumem-tab" data-toggle="pill" href="#newpool-cpumem" role="tab" aria-controls="newpool-cpumem" aria-selected="false">CPU/Memory</a>
+                      <a class="nav-link" id="newpool-cpumem-tab" data-toggle="pill" href="#newpool-cpumem" role="tab" aria-controls="newpool-cpumem" aria-selected="false" i18n>CPU/Memory</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="newpool-disks-tab" data-toggle="pill" href="#newpool-disks" role="tab" aria-controls="newpool-disks" aria-selected="false">Disk</a>
+                      <a class="nav-link" id="newpool-disks-tab" data-toggle="pill" href="#newpool-disks" role="tab" aria-controls="newpool-disks" aria-selected="false" i18n>Disk</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="newpool-net-tab" data-toggle="pill" href="#newpool-net" role="tab" aria-controls="newpool-net" aria-selected="false">Networking</a>
+                      <a class="nav-link" id="newpool-net-tab" data-toggle="pill" href="#newpool-net" role="tab" aria-controls="newpool-net" aria-selected="false" i18n>Networking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="newpool-liveness-tab" data-toggle="pill" href="#newpool-liveness" role="tab" aria-controls="newpool-liveness" aria-selected="false">Liveness Probe</a>
+                        <a class="nav-link" id="newpool-liveness-tab" data-toggle="pill" href="#newpool-liveness" role="tab" aria-controls="newpool-liveness" aria-selected="false" i18n>Liveness Probe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="newpool-readiness-tab" data-toggle="pill" href="#newpool-readiness" role="tab" aria-controls="newpool-readiness" aria-selected="false">Readiness Probe</a>
+                        <a class="nav-link" id="newpool-readiness-tab" data-toggle="pill" href="#newpool-readiness" role="tab" aria-controls="newpool-readiness" aria-selected="false" i18n>Readiness Probe</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="newpool-userdata-tab" data-toggle="pill" href="#newpool-userdata" role="tab" aria-controls="newpool-userdata" aria-selected="false">User Data</a>
+                      <a class="nav-link" id="newpool-userdata-tab" data-toggle="pill" href="#newpool-userdata" role="tab" aria-controls="newpool-userdata" aria-selected="false" i18n>User Data</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="newpool-initscript-tab" data-toggle="pill" href="#newpool-initscript" role="tab" aria-controls="newpool-initscript" aria-selected="false">Init Script</a>
+                        <a class="nav-link" id="newpool-initscript-tab" data-toggle="pill" href="#newpool-initscript" role="tab" aria-controls="newpool-initscript" aria-selected="false" i18n>Init Script</a>
                     </li>
                   </ul>
                 </div>
@@ -151,13 +151,13 @@
                   <!-- HOME TAB -->
                   <div class="tab-content" id="custom-tabs-two-tabContent">
                     <div class="tab-pane fade show active" id="newpool-home" role="tabpanel" aria-labelledby="newpool-home-tab">
-                      <label for="newpool-name">Name:</label>
+                      <label for="newpool-name" i18n>Name:</label>
                       <input #newpoolname type="text" class="form-control" id="newpool-name" name="newpool-name">
-                      <label for="newpool-namespaces">Namespace:</label>
+                      <label for="newpool-namespaces" i18n>Namespace:</label>
                       <select #newpoolnamespace class="custom-select rounded-0" name="newpool-namespace" id="newpool-namespace" (change)="onChangeNamespace(newpoolnamespace.value)">
                         <option>Value 1</option>
                       </select>
-                      <label for="newpool-replicas">Replicas:</label>
+                      <label for="newpool-replicas" i18n>Replicas:</label>
                       <input #newpoolreplicas type="number" class="form-control" id="newpool-replicas" name="newpool-replicas">
                     </div>
                     <!-- LABELS TAB -->
@@ -165,8 +165,8 @@
                         <table class="table table-sm" style="vertical-align: middle !important;">
                             <thead>
                                 <tr>
-                                <th style="width: 250px">Key</th>
-                                <th style="width: 250px">Value</th>
+                                <th style="width: 250px" i18n>Key</th>
+                                <th style="width: 250px" i18n>Value</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -195,30 +195,30 @@
                     </div>
                     <!-- CPU/MEM TAB -->
                     <div class="tab-pane fade" id="newpool-cpumem" role="tabpanel" aria-labelledby="newpool-cpumem-tab">
-                      <label for="newpool-namespaces">Virtual Machine Type:</label>
+                      <label for="newpool-namespaces" i18n>Virtual Machine Type:</label>
                       <select #newpooltype class="custom-select rounded-0" name="newpool-type" id="newpool-type" (change)="onChangeType(newpooltype.value)">
                           <option>Value 1</option>
                       </select>
                       <div class="pane fade" id="custom-cpu-memory" name="custom-cpu-memory" style="display: none;" aria-hidden="true">
-                          <label for="newpool-cpumem-sockets">Sockets:</label>
+                          <label for="newpool-cpumem-sockets" i18n>Sockets:</label>
                           <input #newpoolcpumemsockets type="number" class="form-control" id="newpool-cpumem-sockets" name="newpool-cpumem-sockets">
-                          <label for="newpool-cpumem-cores">Cores:</label>
+                          <label for="newpool-cpumem-cores" i18n>Cores:</label>
                           <input #newpoolcpumemcores type="number" class="form-control" id="newpool-cpumem-cores" name="newpool-cpumem-cores">
-                          <label for="newpool-cpumem-threads">Threads:</label>
+                          <label for="newpool-cpumem-threads" i18n>Threads:</label>
                           <input #newpoolcpumemthreads type="number" class="form-control" id="newpool-cpumem-threads" name="newpool-cpumem-threads">
-                          <label for="newpool-cpumem-memory">Memory (in GB):</label>
+                          <label for="newpool-cpumem-memory" i18n>Memory (in GB):</label>
                           <input #newpoolcpumemmemory type="number" class="form-control" id="newpool-cpumem-memory" name="newpool-cpumem-memory">
                       </div>
-                      <label for="newpool-priorityclass">Priority Class:</label>
+                      <label for="newpool-priorityclass" i18n>Priority Class:</label>
                       <select #newpoolpc class="custom-select rounded-0" name="newpool-pc" id="newpool-pc">
                           <option>Value 1</option>
                       </select>
-                      <label for="newpool-firmware">Firmware:</label>
+                      <label for="newpool-firmware" i18n>Firmware:</label>
                     <select #newpoolfirmware class="custom-select rounded-0" name="newpool-firmware" id="newpool-firmware" (change)="onChangeFirmware(newpoolfirmware.value)">
                         <option value="bios" selected>BIOS</option>
                         <option value="uefi">UEFI</option>
                     </select>
-                    <label for="newpool-secureboot">Secure Boot:</label>
+                    <label for="newpool-secureboot" i18n>Secure Boot:</label>
                     <select #newpoolsecureboot class="custom-select rounded-0" name="newpool-secureboot" id="newpool-secureboot" disabled>
                         <option value="false" selected>false</option>
                         <option value="true">true</option>
@@ -226,10 +226,10 @@
                     </div>
                     <!-- DISK TAB -->
                     <div class="tab-pane fade" id="newpool-disks" role="tabpanel" aria-labelledby="newpool-disks-tab">
-                      <label for="disk1div">Disk 1:</label>
+                      <label for="disk1div" i18n>Disk 1:</label>
                       <div class="row">
                         <div class="col-2" name="newpool-diskone-type-col">
-                          <label for="newpool-diskonetype">Type:</label>
+                          <label for="newpool-diskonetype" i18n>Type:</label>
                           <select #newpooldiskonetype class="custom-select rounded-0" name="newpool-diskonetype" id="newpool-diskonetype" (change)="onChangeDiskOne(newpooldiskonetype.value,newpoolnamespace.value)">
                             <option value="none">None</option>
                             <option value="blank">Blank Disk</option>
@@ -238,12 +238,12 @@
                           </select>
                         </div>
                         <div class="col-2">
-                          <label for="newpool-diskonesc">Storage Class:</label>
+                          <label for="newpool-diskonesc" i18n>Storage Class:</label>
                           <select #newpooldiskonesc class="custom-select rounded-0" name="newpool-diskonesc" id="newpool-diskonesc">
                           </select>
                         </div>
                         <div class="col-2">
-                            <label for="newpool-diskoneam">Access Mode:</label>
+                            <label for="newpool-diskoneam" i18n>Access Mode:</label>
                             <select #newpooldiskoneam class="custom-select rounded-0" name="newpool-diskoneam" id="newpool-diskoneam">
                                 <option>ReadWriteOnce</option>
                                 <option>ReadOnlyMany</option>
@@ -251,16 +251,16 @@
                             </select>
                         </div>
                         <div class="col-3">
-                          <label for="newpool-diskonevalue">Value:</label>
+                          <label for="newpool-diskonevalue" i18n>Value:</label>
                           <select #newpooldiskonevalue class="custom-select rounded-0" name="newpool-diskonevalue" id="newpool-diskonevalue" disabled>
                           </select>
                         </div>
                         <div class="col-1">
-                          <label for="newpool-diskonesize">Size in GB:</label>
+                          <label for="newpool-diskonesize" i18n>Size in GB:</label>
                           <input #newpooldiskonesize type=number class="form-control" id="newpool-diskonesize" disabled>
                         </div>
                         <div class="col-2">
-                          <label for="newpool-diskonecm">Cache Mode:</label>
+                          <label for="newpool-diskonecm" i18n>Cache Mode:</label>
                           <select #newpooldiskonecm class="custom-select rounded-0" name="newpool-diskonecm" id="newpool-diskonecm">
                             <option value="">Automatic</option>
                             <option value="none">None</option>
@@ -273,7 +273,7 @@
                       <label for="disk2div">Disk 2:</label>
                       <div class="row">
                         <div class="col-2" name="newpool-diskone-type-col">
-                            <label for="newpool-disktwotype">Type:</label>
+                            <label for="newpool-disktwotype" i18n>Type:</label>
                             <select #newpooldisktwotype class="custom-select rounded-0" name="newpool-disktwotype" id="newpool-disktwotype" (change)="onChangeDiskTwo(newpooldisktwotype.value,newpoolnamespace.value)">
                               <option value="none">None</option>
                               <option value="blank">Blank Disk</option>
@@ -282,12 +282,12 @@
                             </select>
                           </div>
                           <div class="col-2">
-                            <label for="newpool-disktwosc">Storage Class:</label>
+                            <label for="newpool-disktwosc" i18n>Storage Class:</label>
                             <select #newpooldisktwosc class="custom-select rounded-0" name="newpool-disktwosc" id="newpool-disktwosc">
                             </select>
                           </div>
                           <div class="col-2">
-                            <label for="newpool-disktwoam">Access Mode:</label>
+                            <label for="newpool-disktwoam" i18n>Access Mode:</label>
                             <select #newpooldisktwoam class="custom-select rounded-0" name="newpool-disktwoam" id="newpool-disktwoam">
                                 <option>ReadWriteOnce</option>
                                 <option>ReadOnlyMany</option>
@@ -295,16 +295,16 @@
                             </select>
                           </div>
                           <div class="col-3">
-                              <label for="newpool-disktwovalue">Value:</label>
+                              <label for="newpool-disktwovalue" i18n>Value:</label>
                               <select #newpooldisktwovalue class="custom-select rounded-0" name="newpool-disktwovalue" id="newpool-disktwovalue" disabled>
                               </select>
                           </div>
                           <div class="col-1">
-                            <label for="newpool-disktwosize">Size in GB:</label>
+                            <label for="newpool-disktwosize" i18n>Size in GB:</label>
                             <input #newpooldisktwosize type=number class="form-control" id="newpool-disktwosize" disabled>
                           </div>
                           <div class="col-2">
-                            <label for="newpool-disktwocm">Cache Mode:</label>
+                            <label for="newpool-disktwocm" i18n>Cache Mode:</label>
                             <select #newpooldisktwocm class="custom-select rounded-0" name="newpool-disktwocm" id="newpool-disktwocm">
                               <option value="">Automatic</option>
                               <option value="none">None</option>
@@ -316,11 +316,11 @@
                     </div>
                     <!-- NETWORK TAB -->
                     <div class="tab-pane fade" id="newpool-net" role="tabpanel" aria-labelledby="newpool-net-tab">
-                      <label for="newpool-network">Network:</label>
+                      <label for="newpool-network" i18n>Network:</label>
                       <select #newpoolnetwork class="custom-select rounded-0" name="newpool-network" id="newpool-network" (change)="onChangeNetwork(newpoolnetwork.value)">
                         <option value=podNetwork>podNetwork</option>
                       </select>
-                      <label for="newpool-networktype">Type:</label>
+                      <label for="newpool-networktype" i18n>Type:</label>
                       <select #newpoolnetworktype class="custom-select rounded-0" name="newpool-networktype" id="newpool-networktype">
                         <option value=bridge>bridge</option>
                         <option value=masquerade>masquerade</option>
@@ -328,75 +328,75 @@
                     </div>
                     <!-- LIVENESS CHECK TAB -->
                     <div class="tab-pane fade" id="newpool-liveness" role="tabpanel" aria-labelledby="newpool-liveness-tab">
-                      <label for="newpool-liveness-enable">Liveness Probe:</label>
+                      <label for="newpool-liveness-enable" i18n>Liveness Probe:</label>
                       <select #newpoollivenessenable class="custom-select rounded-0" name="newpool-liveness-enable" id="newpool-liveness-enable" (change)="onChangeLiveness(newpoollivenessenable.value)">
                         <option value="disabled">Disabled</option>
                         <option value="enabled">Enabled</option>
                       </select>
-                      <label for="newpool-liveness-type">Probe Type:</label>
+                      <label for="newpool-liveness-type" i18n>Probe Type:</label>
                       <select #newpoollivenesstype class="custom-select rounded-0" name="newpool-liveness-type" id="newpool-liveness-type" (change)="onChangeLivenessType(newpoollivenesstype.value)" disabled>
                         <option value="tcp">TCP</option>
                         <option value="http">HTTP</option>
                       </select>
                       <div class="pane fade" id="newpool-liveness-path-panel" name="newpool-liveness-path-panel" style="display: none;" aria-hidden="true">
-                        <label for="newpool-liveness-path">HTTP Path:</label>
+                        <label for="newpool-liveness-path" i18n>HTTP Path:</label>
                         <input #newpoollivenesspath type="text" class="form-control" id="newpool-liveness-path" name="newpool-liveness-path">
                       </div>
-                      <label for="newpool-liveness-port">Port:</label>
+                      <label for="newpool-liveness-port" i18n>Port:</label>
                       <input #newpoollivenessport type="number" class="form-control" id="newpool-liveness-port" name="newpool-liveness-port" disabled>
-                      <label for="newpool-liveness-initialdelay">Initial Delay (s):</label>
+                      <label for="newpool-liveness-initialdelay" i18n>Initial Delay (s):</label>
                       <input #newpoollivenessinitialdelay type="number" class="form-control" id="newpool-liveness-initialdelay" name="newpool-liveness-initialdelay" disabled>
-                      <label for="newpool-liveness-interval">Interval (s):</label>
+                      <label for="newpool-liveness-interval" i18n>Interval (s):</label>
                       <input #newpoollivenessinterval type="number" class="form-control" id="newpool-liveness-interval" name="newpool-liveness-interval" disabled>
-                      <label for="newpool-liveness-timeout">Timeout (s):</label>
+                      <label for="newpool-liveness-timeout" i18n>Timeout (s):</label>
                       <input #newpoollivenesstimeout type="number" class="form-control" id="newpool-liveness-timeout" name="newpool-liveness-timeout" disabled>
-                      <label for="newpool-liveness-failure">Failure Threshold:</label>
+                      <label for="newpool-liveness-failure" i18n>Failure Threshold:</label>
                       <input #newpoollivenessfailure type="number" class="form-control" id="newpool-liveness-failure" name="newpool-liveness-failure" disabled>
                       <input #newpoollivenesssuccess type="hidden" class="form-control" id="newpool-liveness-success" name="newpool-liveness-success" value="1">
                     </div>
                     <!-- READINESS CHECK TAB -->
                     <div class="tab-pane fade" id="newpool-readiness" role="tabpanel" aria-labelledby="newpool-readiness-tab">
-                        <label for="newpool-readiness-enable">Readiness Probe:</label>
+                        <label for="newpool-readiness-enable" i18n>Readiness Probe:</label>
                         <select #newpoolreadinessenable class="custom-select rounded-0" name="newpool-readiness-enable" id="newpool-readiness-enable" (change)="onChangeReadiness(newpoolreadinessenable.value)">
                           <option value="disabled">Disabled</option>
                           <option value="enabled">Enabled</option>
                         </select>
-                        <label for="newpool-readiness-type">Probe Type:</label>
+                        <label for="newpool-readiness-type" i18n>Probe Type:</label>
                         <select #newpoolreadinesstype class="custom-select rounded-0" name="newpool-readiness-type" id="newpool-readiness-type" (change)="onChangeReadinessType(newpoolreadinesstype.value)" disabled>
                           <option value="tcp">TCP</option>
                           <option value="http">HTTP</option>
                         </select>
                         <div class="pane fade" id="newpool-readiness-path-panel" name="newpool-readiness-path-panel" style="display: none;" aria-hidden="true">
-                          <label for="newpool-readiness-path">HTTP Path:</label>
+                          <label for="newpool-readiness-path" i18n>HTTP Path:</label>
                           <input #newpoolreadinesspath type="text" class="form-control" id="newpool-readiness-path" name="newpool-readiness-path">
                         </div>
-                        <label for="newpool-readiness-port">Port:</label>
+                        <label for="newpool-readiness-port" i18n>Port:</label>
                         <input #newpoolreadinessport type="number" class="form-control" id="newpool-readiness-port" name="newpool-readiness-port" disabled>
-                        <label for="newpool-readiness-initialdelay">Initial Delay (s):</label>
+                        <label for="newpool-readiness-initialdelay" i18n>Initial Delay (s):</label>
                         <input #newpoolreadinessinitialdelay type="number" class="form-control" id="newpool-readiness-initialdelay" name="newpool-readiness-initialdelay" disabled>
-                        <label for="newpool-readiness-interval">Interval (s):</label>
+                        <label for="newpool-readiness-interval" i18n>Interval (s):</label>
                         <input #newpoolreadinessinterval type="number" class="form-control" id="newpool-readiness-interval" name="newpool-readiness-interval" disabled>
-                        <label for="newpool-readiness-timeout">Timeout (s):</label>
+                        <label for="newpool-readiness-timeout" i18n>Timeout (s):</label>
                         <input #newpoolreadinesstimeout type="number" class="form-control" id="newpool-readiness-timeout" name="newpool-readiness-timeout" disabled>
-                        <label for="newpool-readiness-failure">Failure Threshold:</label>
+                        <label for="newpool-readiness-failure" i18n>Failure Threshold:</label>
                         <input #newpoolreadinessfailure type="number" class="form-control" id="newpool-readiness-failure" name="newpool-readiness-failure" disabled>
                         <input #newpoolreadinesssuccess type="hidden" class="form-control" id="newpool-readiness-success" name="newpool-readiness-success" value="1">
                     </div>
                     <!-- USERDATA TAB -->
                     <div class="tab-pane fade" id="newpool-userdata" role="tabpanel" aria-labelledby="newpool-userdata-tab">
-                        <label for="newpool-userdata-username">Username:</label>
+                        <label for="newpool-userdata-username" i18n>Username:</label>
                         <input #newpooluserdatausername type="text" class="form-control" id="newpool-userdata-username" name="newpool-userdata-username">
-                        <label for="newpool-userdata-auth">Authentication:</label>
+                        <label for="newpool-userdata-auth" i18n>Authentication:</label>
                         <select #newpooluserdataauth class="custom-select rounded-0" name="newpool-userdata-auth" id="newpool-userdata-auth" (change)="onChangeAuthType(newpooluserdataauth.value, newpoolnamespace.value)">
                           <option value="password">User/Password</option>
                           <option value="ssh">SSH Private Key</option>
                         </select>
                         <div class="pane fade show" id="newpool-userdata-password-panel" name="newpool-userdata-password-panel" style="display: contents;" aria-hidden="false">
-                          <label for="newpool-userdata-password">Password:</label>
+                          <label for="newpool-userdata-password" i18n>Password:</label>
                           <input #newpooluserdatapassword type="password" class="form-control" id="newpool-userdata-password" name="newpool-userdata-password">
                         </div>
                         <div class="pane fade" id="newpool-userdata-ssh-panel" name="newpool-userdata-ssh-panel" style="display: none;" aria-hidden="true">
-                          <label for="newpool-userdata-ssh">SSH Key:</label>
+                          <label for="newpool-userdata-ssh" i18n>SSH Key:</label>
                           <select #newpooluserdatassh class="custom-select rounded-0" name="newpool-userdata-ssh" id="newpool-userdata-ssh">
                             <option>Loading...</option>
                           </select>
@@ -412,8 +412,8 @@
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-newpool")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyNewPool(newpoolname.value, newpoolnamespace.value, newpoolreplicas.value, newpoollabelkeyone.value, newpoollabelvalueone.value, newpoollabelkeytwo.value, newpoollabelvaluetwo.value, newpoollabelkeythree.value, newpoollabelvaluethree.value, newpoollabelkeyfour.value, newpoollabelvaluefour.value, newpoollabelkeyfive.value, newpoollabelvaluefive.value, newpooltype.value, newpoolcpumemsockets.value, newpoolcpumemcores.value, newpoolcpumemthreads.value, newpoolcpumemmemory.value, newpoolpc.value, newpoolfirmware.value, newpoolsecureboot.value, newpooldiskonetype.value, newpooldiskonevalue.value, newpooldiskonesize.value, newpooldiskonesc.value, newpooldiskoneam.value, newpooldiskonecm.value, newpooldisktwotype.value, newpooldisktwovalue.value, newpooldisktwosize.value, newpooldisktwosc.value, newpooldisktwoam.value, newpooldisktwocm.value, newpoolnetwork.value, newpoolnetworktype.value, newpoollivenessenable.value, newpoollivenesstype.value, newpoollivenesspath.value, newpoollivenessport.value, newpoollivenessinitialdelay.value, newpoollivenessinterval.value, newpoollivenesstimeout.value, newpoollivenessfailure.value, newpoollivenesssuccess.value, newpoolreadinessenable.value, newpoolreadinesstype.value, newpoolreadinesspath.value, newpoolreadinessport.value, newpoolreadinessinitialdelay.value, newpoolreadinessinterval.value, newpoolreadinesstimeout.value, newpoolreadinessfailure.value, newpoolreadinesssuccess.value, newpooluserdatausername.value, newpooluserdataauth.value, newpooluserdatapassword.value, newpooluserdatassh.value, newpoolinitscript.value)">Create</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-newpool")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyNewPool(newpoolname.value, newpoolnamespace.value, newpoolreplicas.value, newpoollabelkeyone.value, newpoollabelvalueone.value, newpoollabelkeytwo.value, newpoollabelvaluetwo.value, newpoollabelkeythree.value, newpoollabelvaluethree.value, newpoollabelkeyfour.value, newpoollabelvaluefour.value, newpoollabelkeyfive.value, newpoollabelvaluefive.value, newpooltype.value, newpoolcpumemsockets.value, newpoolcpumemcores.value, newpoolcpumemthreads.value, newpoolcpumemmemory.value, newpoolpc.value, newpoolfirmware.value, newpoolsecureboot.value, newpooldiskonetype.value, newpooldiskonevalue.value, newpooldiskonesize.value, newpooldiskonesc.value, newpooldiskoneam.value, newpooldiskonecm.value, newpooldisktwotype.value, newpooldisktwovalue.value, newpooldisktwosize.value, newpooldisktwosc.value, newpooldisktwoam.value, newpooldisktwocm.value, newpoolnetwork.value, newpoolnetworktype.value, newpoollivenessenable.value, newpoollivenesstype.value, newpoollivenesspath.value, newpoollivenessport.value, newpoollivenessinitialdelay.value, newpoollivenessinterval.value, newpoollivenesstimeout.value, newpoollivenessfailure.value, newpoollivenesssuccess.value, newpoolreadinessenable.value, newpoolreadinesstype.value, newpoolreadinesspath.value, newpoolreadinessport.value, newpoolreadinessinitialdelay.value, newpoolreadinessinterval.value, newpoolreadinesstimeout.value, newpoolreadinessfailure.value, newpoolreadinesssuccess.value, newpooluserdatausername.value, newpooluserdataauth.value, newpooluserdatapassword.value, newpooluserdatassh.value, newpoolinitscript.value)" i18n>Create</button>
             </div>
           </form>
           </div>
@@ -440,8 +440,8 @@
               <p>BODY_TEMPLATE</p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")'>Close</button>
-              <button type="button" class="btn btn-danger" (click)="applyDelete()">Delete</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")' i18n>Close</button>
+              <button type="button" class="btn btn-danger" (click)="applyDelete()" i18n>Delete</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -467,8 +467,8 @@
               <p>BODY_TEMPLATE</p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-deletevm")'>Close</button>
-              <button type="button" class="btn btn-danger" (click)="applyDeleteVM()">Delete</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-deletevm")' i18n>Close</button>
+              <button type="button" class="btn btn-danger" (click)="applyDeleteVM()" i18n>Delete</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -491,14 +491,14 @@
             <input type="hidden" id="type-pool" name="type-pool" value="">
             <input type="hidden" id="type-namespace" name="type-namespace" value="">
             <div class="modal-body" id="type-value">
-              <label for="newType">Virtual Machine Pool Type:</label>
+              <label for="newType" i18n>Virtual Machine Pool Type:</label>
               <select #changepooltype class="custom-select rounded-0" name="changepool-type" id="changepool-type">
                   <option>Value 1</option>
               </select>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyType(changepooltype.value)">Save changes</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyType(changepooltype.value)" i18n>Save changes</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -522,18 +522,18 @@
             <div class="modal-body" id="resize-value">
               <input #resizeName type="hidden" id="resize-name" name="resize-name" value="">
               <input #resizeNamespace type="hidden" id="resize-namespace" name="resize-namespace" value="">
-              <label for="resize-sockets">Sockets:</label>
+              <label for="resize-sockets" i18n>Sockets:</label>
               <input #resizeSockets type="number" class="form-control" id="resize-sockets" name="resize-sockets">
-              <label for="resize-cores">Cores:</label>
+              <label for="resize-cores" i18n>Cores:</label>
               <input #resizeCores type="number" class="form-control" id="resize-cores" name="resize-cores">
-              <label for="resize-threads">Threads:</label>
+              <label for="resize-threads" i18n>Threads:</label>
               <input #resizeThreads type="number" class="form-control" id="resize-threads" name="resize-threas">
-              <label for="resize-memory">Memory (in GB):</label>
+              <label for="resize-memory" i18n>Memory (in GB):</label>
               <input #resizeMemory type="number" class="form-control" id="resize-memory" name="resize-memory">
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyResize(resizeSockets.value, resizeCores.value, resizeThreads.value, resizeMemory.value)">Save changes</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyResize(resizeSockets.value, resizeCores.value, resizeThreads.value, resizeMemory.value)" i18n>Save changes</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -558,13 +558,13 @@
               <div class="form-group">
                 <input type="hidden" id="replicas-namespace" name="replicas-namespace" value="">
                 <input type="hidden" id="replicas-pool" name="replicas-pool" value="">
-                <label for="replicasInput">New number of replicas</label>
+                <label for="replicasInput" i18n>New number of replicas</label>
                 <input #replicasinput type="number" class="form-control" id="replicas-input" name="replicas-input" placeholder="0">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-replicas")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyReplicas(replicasinput.value)">Resize</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-replicas")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyReplicas(replicasinput.value)" i18n>Resize</button>
             </div>
           </div>
           <!-- /.modal-content -->

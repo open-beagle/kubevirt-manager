@@ -20,7 +20,7 @@ export class NodelistComponent implements OnInit {
         await this.getNodes();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Nodes");
+            navTitle.replaceChildren($localize`Nodes`);
         }
     }
 

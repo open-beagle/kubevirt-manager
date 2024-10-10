@@ -78,7 +78,7 @@ export class KClusterPoolDetailsComponent implements OnInit {
         await this.loadWorkerPoolsVMs();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Kubernetes Cluster - Pool Details");
+            navTitle.replaceChildren($localize`Kubernetes Cluster - Pool Details`);
         }
     }
 

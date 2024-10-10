@@ -20,7 +20,7 @@ export class NetworkListComponent implements OnInit {
         await this.getNetworks();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Network");
+            navTitle.replaceChildren($localize`Network`);
         }
     }
 

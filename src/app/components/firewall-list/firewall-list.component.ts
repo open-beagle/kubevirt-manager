@@ -31,7 +31,7 @@ export class FirewallListComponent implements OnInit {
         await this.loadRules();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Firewall Policies");
+            navTitle.replaceChildren($localize`Firewall Policies`);
         }
     }
 
@@ -90,7 +90,7 @@ export class FirewallListComponent implements OnInit {
         let selectorNamespacesField = document.getElementById("new-rule-namespace");
         let i = 0;
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Firewall Rule");
+            modalTitle.replaceChildren($localize`New Firewall Rule`);
         }
 
         /* Load Namespace List and Set Selector */

@@ -35,7 +35,7 @@ export class DiskListComponent implements OnInit {
         await this.getNamespaces();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Virtual Machine Data Volumes");
+            navTitle.replaceChildren($localize`Virtual Machine Data Volumes`);
         }
     }
 
@@ -228,7 +228,7 @@ export class DiskListComponent implements OnInit {
         let selectorStorageClassField = document.getElementById("new-disk-storageclass");
         let i = 0;
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Blank Disk");
+            modalTitle.replaceChildren($localize`New Blank Disk`);
         }
 
         /* Load Namespace List and Set Selector */
@@ -312,7 +312,7 @@ export class DiskListComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let diskNamespaceInput = document.getElementById("delete-namespace");

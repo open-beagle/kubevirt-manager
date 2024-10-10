@@ -26,7 +26,7 @@ export class ClusterInstanceTypeListComponent implements OnInit {
         this.getClusterInstanceTypes();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Cluster Instance Types");
+            navTitle.replaceChildren($localize`Cluster Instance Types`);
         }
     }
 
@@ -106,7 +106,7 @@ export class ClusterInstanceTypeListComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let deleteTypeInput = document.getElementById("delete-type");
@@ -152,7 +152,7 @@ export class ClusterInstanceTypeListComponent implements OnInit {
         let modalDiv = document.getElementById("modal-new");
         let modalTitle = document.getElementById("new-title");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Cluster Instance Type");
+            modalTitle.replaceChildren($localize`New Cluster Instance Type`);
         }
         if(modalDiv != null) {
             modalDiv.setAttribute("class", "modal fade show");

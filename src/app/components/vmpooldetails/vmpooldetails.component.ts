@@ -99,7 +99,7 @@ export class VmpooldetailsComponent implements OnInit {
         await this.loadPool();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Virtual Machine Pool Details");
+            navTitle.replaceChildren($localize`Virtual Machine Pool Details`);
         }
     }
 
@@ -495,7 +495,7 @@ export class VmpooldetailsComponent implements OnInit {
         let modalTitle = document.getElementById("deletevm-title");
         let modalBody = document.getElementById("deletevm-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let vmNameInput = document.getElementById("deletevm-name");

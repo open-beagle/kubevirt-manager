@@ -57,7 +57,7 @@ export class KClusterComponent implements OnInit {
         await this.getClusters();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Kubernetes Clusters");
+            navTitle.replaceChildren($localize`Kubernetes Clusters`);
         }
     }
 
@@ -260,7 +260,7 @@ export class KClusterComponent implements OnInit {
         let modalTitle = document.getElementById("new-title");
         let modalBody = document.getElementById("new-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Kubernetes Cluster");
+            modalTitle.replaceChildren($localize`New Kubernetes Cluster`);
         }
         
         if(modalDiv != null) {
@@ -281,7 +281,7 @@ export class KClusterComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let clusterNameInput = document.getElementById("delete-name");
@@ -403,7 +403,7 @@ export class KClusterComponent implements OnInit {
          * to avoid delays
          */
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Kubernetes Cluster");
+            modalTitle.replaceChildren($localize`New Kubernetes Cluster`);
         }
         if(modalDiv != null) {
             modalDiv.setAttribute("class", "modal fade show");
@@ -510,7 +510,7 @@ export class KClusterComponent implements OnInit {
          * to avoid delays
          */
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Kubernetes Cluster");
+            modalTitle.replaceChildren($localize`New Kubernetes Cluster`);
         }
         if(modalDiv != null) {
             modalDiv.setAttribute("class", "modal fade show");

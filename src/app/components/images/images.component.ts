@@ -29,7 +29,7 @@ export class ImagesComponent implements OnInit {
         await this.getNamespaces();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Images");
+            navTitle.replaceChildren($localize`Images`);
         }
     }
 
@@ -142,7 +142,7 @@ export class ImagesComponent implements OnInit {
         let modalTitle = document.getElementById("new-title");
         let selectorNamespacesField = document.getElementById("new-image-namespace");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Image");
+            modalTitle.replaceChildren($localize`New Image`);
         }
 
          /* Load Namespace List and Set Selector */
@@ -198,7 +198,7 @@ export class ImagesComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let imageNameInput = document.getElementById("delete-name");

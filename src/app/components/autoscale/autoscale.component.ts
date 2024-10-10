@@ -29,7 +29,7 @@ export class AutoscaleComponent implements OnInit {
         await this.getHPAs();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Auto Scaling");
+            navTitle.replaceChildren($localize`Auto Scaling`);
         }
     }
 
@@ -76,7 +76,7 @@ export class AutoscaleComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let hpaNamespaceInput = document.getElementById("delete-namespace");
@@ -118,7 +118,7 @@ export class AutoscaleComponent implements OnInit {
         }
 
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Scaling Group");
+            modalTitle.replaceChildren($localize`New Scaling Group`);
         }
 
         if(modalDiv != null) {
@@ -144,7 +144,7 @@ export class AutoscaleComponent implements OnInit {
         let modalBody = document.getElementById("edit-value");
 
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Config Scaling Group");
+            modalTitle.replaceChildren($localize`Config Scaling Group`);
         }
 
         let modalHpaNamespace = document.getElementById("edit-hpa-namespace");

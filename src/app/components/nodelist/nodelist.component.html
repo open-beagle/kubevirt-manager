@@ -11,17 +11,17 @@
         </div>
         <div class="card-body">
           <ul class="nav flex-column">
-            <li class="nav-item">Hostname <span class="float-right badge bg-primary">{{thisNode.name}}</span></li>
-            <li class="nav-item">Architecture <span class="float-right badge bg-primary">{{thisNode.arch}}</span></li>
-            <li class="nav-item">Operating System <span class="float-right badge bg-primary">{{thisNode.os}}</span></li>
-            <li class="nav-item">Pod CIDR <span class="float-right badge bg-primary">{{thisNode.cidr}}</span></li>
-            <li class="nav-item">CPU <span class="float-right badge bg-primary">{{thisNode.cpu}}</span></li>
-            <li class="nav-item">Memory <span class="float-right badge bg-primary">{{thisNode.mem}}</span></li>
-            <li class="nav-item">Disk <span class="float-right badge bg-primary">{{thisNode.disk}}</span></li>
-            <li class="nav-item">OS Image <span class="float-right badge bg-primary">{{thisNode.osimg}}</span></li>
-            <li class="nav-item">Kernel <span class="float-right badge bg-primary">{{thisNode.kernel}}</span></li>
-            <li class="nav-item">CRI Version <span class="float-right badge bg-primary">{{thisNode.criver}}</span></li>
-            <li class="nav-item">Kubernetes Version <span class="float-right badge bg-primary">{{thisNode.kubever}}</span></li>
+            <li class="nav-item"><ng-container i18n>Hostname</ng-container> <span class="float-right badge bg-primary">{{thisNode.name}}</span></li>
+            <li class="nav-item"><ng-container i18n>Architecture</ng-container> <span class="float-right badge bg-primary">{{thisNode.arch}}</span></li>
+            <li class="nav-item"><ng-container i18n>Operating System</ng-container> <span class="float-right badge bg-primary">{{thisNode.os}}</span></li>
+            <li class="nav-item"><ng-container i18n>Pod CIDR</ng-container> <span class="float-right badge bg-primary">{{thisNode.cidr}}</span></li>
+            <li class="nav-item"><ng-container i18n>CPU</ng-container> <span class="float-right badge bg-primary">{{thisNode.cpu}}</span></li>
+            <li class="nav-item"><ng-container i18n>Memory</ng-container> <span class="float-right badge bg-primary">{{thisNode.mem}}</span></li>
+            <li class="nav-item"><ng-container i18n>Disk</ng-container> <span class="float-right badge bg-primary">{{thisNode.disk}}</span></li>
+            <li class="nav-item"><ng-container i18n>OS Image</ng-container> <span class="float-right badge bg-primary">{{thisNode.osimg}}</span></li>
+            <li class="nav-item"><ng-container i18n>Kernel</ng-container> <span class="float-right badge bg-primary">{{thisNode.kernel}}</span></li>
+            <li class="nav-item"><ng-container i18n>CRI Version</ng-container> <span class="float-right badge bg-primary">{{thisNode.criver}}</span></li>
+            <li class="nav-item"><ng-container i18n>Kubernetes Version</ng-container> <span class="float-right badge bg-primary">{{thisNode.kubever}}</span></li>
           </ul>
         </div>
       </div>
