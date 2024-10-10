@@ -1,5 +1,7 @@
 # 国际化
 
+angular18 国际化 参考 https://angular.cn/guide/i18n
+
 ## 源代码修改
 
 遇到未翻译的文本，按照如下情况进行修改：

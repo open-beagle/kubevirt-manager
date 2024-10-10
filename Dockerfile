@@ -21,4 +21,4 @@ RUN curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/st
 COPY entrypoint/91-startkubectl.sh /docker-entrypoint.d
 COPY conf/*.conf /etc/nginx/conf.d/
 RUN chmod +x /docker-entrypoint.d/91-startkubectl.sh
-COPY --from=builder /usr/src/app/dist/kubevirtmgr-webui/browser /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist/kubevirtmgr-webui/browser/zh /usr/share/nginx/html
