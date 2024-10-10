@@ -22,3 +22,4 @@ COPY entrypoint/91-startkubectl.sh /docker-entrypoint.d
 COPY conf/*.conf /etc/nginx/conf.d/
 RUN chmod +x /docker-entrypoint.d/91-startkubectl.sh
 COPY --from=builder /usr/src/app/dist/kubevirtmgr-webui/browser/zh /usr/share/nginx/html
+RUN sed -i 's@<base href="/zh/">@<base href="/">@' /usr/share/nginx/html/index.html
