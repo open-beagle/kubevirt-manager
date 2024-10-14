@@ -559,7 +559,7 @@ index 849751d..ce99a28 100644
 +                <th style="width: 60px" i18n>Status</th>
 +                <th style="width: 20px" i18n>Progress</th>
 +                <th style="width: 100px" i18n>Storage Class</th>
-+                <th style="width: 100px" i18n>Access Mode</th>                
++                <th style="width: 100px" i18n>Access Mode</th>
 +                <th style="width: 80px" i18n>Actions</th>
                </tr>
              </thead>
@@ -643,7 +643,7 @@ index 87bd16a..d570517 100644
 +                <th style="width: 60px" i18n>Target Type</th>
 +                <th style="width: 20px" i18n>Target</th>
 +                <th style="width: 100px" i18n>Filter Type</th>
-+                <th style="width: 100px" i18n>Filter</th>                
++                <th style="width: 100px" i18n>Filter</th>
 +                <th style="width: 80px" i18n>Ports</th>
                  <th style="width: 20px">&nbsp;</th>
                </tr>
@@ -1358,7 +1358,7 @@ index b237671..5a089aa 100644
 -                          <dd>Firmware: {{activePool.machineTemplate.firmware}} </dd>
 -                          <dd>Secure Boot: {{activePool.machineTemplate.secureBoot}} </dd> 
 +                          <dd><ng-container i18n>Firmware:</ng-container> {{activePool.machineTemplate.firmware}} </dd>
-+                          <dd><ng-container i18n>Secure Boot:</ng-container> {{activePool.machineTemplate.secureBoot}} </dd> 
++                          <dd><ng-container i18n>Secure Boot:</ng-container> {{activePool.machineTemplate.secureBoot}} </dd>
                            -->
                         </div>
                         <!-- Templated VM -->
@@ -1379,7 +1379,7 @@ index b237671..5a089aa 100644
 -                          <dd>Firmware: {{activePool.machineTemplate.firmware}} </dd>
 -                          <dd>Secure Boot: {{activePool.machineTemplate.secureBoot}} </dd> 
 +                          <dd><ng-container i18n>Firmware:</ng-container> {{activePool.machineTemplate.firmware}} </dd>
-+                          <dd><ng-container i18n>Secure Boot:</ng-container> {{activePool.machineTemplate.secureBoot}} </dd> 
++                          <dd><ng-container i18n>Secure Boot:</ng-container> {{activePool.machineTemplate.secureBoot}} </dd>
                            -->
                         </ng-template>
                         <hr>
