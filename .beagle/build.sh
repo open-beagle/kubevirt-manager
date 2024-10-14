@@ -23,4 +23,4 @@ npm run build
 
 git apply -R .beagle/1.4.1-i18n-html.patch
 
-sed -i 's@<base href="/zh-CN/">@<base href="/">@' dist/kubevirtmgr-webui/browser/zh-CN/index.html
+sed -i 's@<base href="/zh/">@<base href="/">@' dist/kubevirtmgr-webui/browser/zh/index.html

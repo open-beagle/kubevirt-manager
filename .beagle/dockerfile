@@ -17,4 +17,4 @@ RUN chmod +x /usr/local/bin/kubectl
 COPY entrypoint/91-startkubectl.sh /docker-entrypoint.d
 COPY conf/*.conf /etc/nginx/conf.d/
 RUN chmod +x /docker-entrypoint.d/91-startkubectl.sh
-COPY dist/kubevirtmgr-webui/browser/zh-CN /usr/share/nginx/html
+COPY dist/kubevirtmgr-webui/browser/zh /usr/share/nginx/html

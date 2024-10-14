@@ -17,7 +17,7 @@ index f850a86..c83b477 100644
        "prefix": "app",
 +      "i18n": {
 +        "locales": {
-+          "zh-CN": "./i18n/zh-CN/messages.zh-CN.xlf"
++          "zh": "./i18n/zh/messages.zh.xlf"
 +        },
 +        "sourceLocale": "en-US"
 +      },
@@ -39,10 +39,10 @@ index f850a86..c83b477 100644
                  "fonts": true
 -              }
 +              },
-+              "localize": ["zh-CN"]
++              "localize": ["zh"]
              },
              "development": {
-+              "localize": ["zh-CN"],
++              "localize": ["zh"],
                "optimization": false,
                "extractLicenses": false,
                "sourceMap": true,
