@@ -93,7 +93,36 @@ docker run -it --rm \
   -v $PWD:/go/src/github.com/open-beagle/kubevirt-manager \
   -w /go/src/github.com/open-beagle/kubevirt-manager \
   --entrypoint=ash \
-  registry.cn-qingdao.aliyuncs.com/wod/kubevirt-manager:1.4.1
+  registry.cn-qingdao.aliyuncs.com/wod/kubevirt-manager:v1.4.1
 
 ls -ll /usr/share/nginx/html/assets/noVNC/
+```
+
+## cache
+
+```bash
+# 构建缓存-->推送缓存至服务器
+docker run --rm \
+  -e PLUGIN_REBUILD=true \
+  -e PLUGIN_ENDPOINT=${S3_ENDPOINT_ALIYUN} \
+  -e PLUGIN_ACCESS_KEY=${S3_ACCESS_KEY_ALIYUN} \
+  -e PLUGIN_SECRET_KEY=${S3_SECRET_KEY_ALIYUN} \
+  -e DRONE_REPO_OWNER="open-beagle" \
+  -e DRONE_REPO_NAME="kubevirt-manager" \
+  -e PLUGIN_MOUNT="./.git,./node_modules" \
+  -v $(pwd):$(pwd) \
+  -w $(pwd) \
+  registry.cn-qingdao.aliyuncs.com/wod/devops-s3-cache:1.0
+
+# 读取缓存-->将缓存从服务器拉取到本地
+docker run --rm \
+  -e PLUGIN_RESTORE=true \
+  -e PLUGIN_ENDPOINT=${S3_ENDPOINT_ALIYUN} \
+  -e PLUGIN_ACCESS_KEY=${S3_ACCESS_KEY_ALIYUN} \
+  -e PLUGIN_SECRET_KEY=${S3_SECRET_KEY_ALIYUN} \
+  -e DRONE_REPO_OWNER="open-beagle" \
+  -e DRONE_REPO_NAME="kubevirt-manager" \
+  -v $(pwd):$(pwd) \
+  -w $(pwd) \
+  registry.cn-qingdao.aliyuncs.com/wod/devops-s3-cache:1.0
 ```
