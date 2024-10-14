@@ -50,3 +50,50 @@ xz -z -k ./tmp/debian-12-generic-amd64-20240901-1857.raw
 
 mc cp --recursive ./tmp/ cache/vscode/kubevirt-cloud-images
 ```
+
+## debug
+
+nodejs v20
+
+```bash
+# china mirror
+# https://npmmirror.com/
+# npm install -g cnpm --registry=https://registry.npmmirror.com
+npm config set registry https://registry.npmmirror.com
+
+# angular/cli
+npm install -g @angular/cli@18.1.1
+
+# install
+npm install
+
+# i18n
+## install i18n libs
+ng add @angular/localize --skip-confirmation
+
+## update i18n
+ng extract-i18n
+
+# build
+npm run build
+```
+
+## build
+
+nodejs 20
+
+```bash
+docker run -it --rm \
+  -v $PWD:/go/src/github.com/open-beagle/kubevirt-manager \
+  -w /go/src/github.com/open-beagle/kubevirt-manager \
+  registry.cn-qingdao.aliyuncs.com/wod/node:v20-alpine \
+  bash .beagle/build.sh
+
+docker run -it --rm \
+  -v $PWD:/go/src/github.com/open-beagle/kubevirt-manager \
+  -w /go/src/github.com/open-beagle/kubevirt-manager \
+  --entrypoint=ash \
+  registry.cn-qingdao.aliyuncs.com/wod/kubevirt-manager:1.4.1
+
+ls -ll /usr/share/nginx/html/assets/noVNC/
+```

@@ -1,0 +1,58 @@
+From d49850dd8a74d29f4b13d2362a0946b9d06e3356 Mon Sep 17 00:00:00 2001
+From: shucheng <shucheng@bd-apaas.com>
+Date: Mon, 14 Oct 2024 15:11:17 +0800
+Subject: [PATCH] xx
+
+---
+ angular.json | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+diff --git a/angular.json b/angular.json
+index f850a86..c83b477 100644
+--- a/angular.json
++++ b/angular.json
+@@ -9,6 +9,12 @@
+       "root": "",
+       "sourceRoot": "src",
+       "prefix": "app",
++      "i18n": {
++        "locales": {
++          "zh-CN": "./i18n/zh-CN/messages.zh-CN.xlf"
++        },
++        "sourceLocale": "en-US"
++      },
+       "architect": {
+         "build": {
+           "builder": "@angular-devkit/build-angular:application",
+@@ -32,7 +38,7 @@
+               "src/styles.css"
+             ],
+             "scripts": [],
+-            "browser": "src/main.ts",
++            "browser": "src/main.ts"
+           },
+           "configurations": {
+             "production": {
+@@ -62,9 +68,11 @@
+                   "inlineCritical": false
+                 },
+                 "fonts": true
+-              }
++              },
++              "localize": ["zh-CN"]
+             },
+             "development": {
++              "localize": ["zh-CN"],
+               "optimization": false,
+               "extractLicenses": false,
+               "sourceMap": true,
+@@ -111,4 +119,4 @@
+       }
+     }
+   }
+-}
++}
+\ No newline at end of file
+-- 
+2.39.2
+

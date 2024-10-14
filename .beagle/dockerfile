@@ -1,0 +1,20 @@
+# Node/Angular Builder
+ARG BASE=nginx:1.27-alpine
+FROM $BASE
+
+ARG AUTHOR
+ARG VERSION
+LABEL maintainer=$AUTHOR version=$VERSION
+LABEL org.opencontainers.image.authors=$AUTHOR
+LABEL description="Kubevirt Manager v1.4.1"
+
+ARG TARGETOS
+ARG TARGETARCH
+
+RUN mkdir -p /etc/nginx/location.d/
+COPY dist/bin/kubectl-$TARGETARCH /usr/local/bin/kubectl
+RUN chmod +x /usr/local/bin/kubectl
+COPY entrypoint/91-startkubectl.sh /docker-entrypoint.d
+COPY conf/*.conf /etc/nginx/conf.d/
+RUN chmod +x /docker-entrypoint.d/91-startkubectl.sh
+COPY dist/kubevirtmgr-webui/browser/zh-CN /usr/share/nginx/html
