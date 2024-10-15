@@ -30,7 +30,7 @@ export class LoadBalancersComponent implements OnInit {
         this.getLoadBalancers();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Load Balancers");
+            navTitle.replaceChildren($localize`Load Balancers`);
         }
     }
 
@@ -146,7 +146,7 @@ export class LoadBalancersComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let lbNamespaceInput = document.getElementById("delete-namespace");
@@ -197,7 +197,7 @@ export class LoadBalancersComponent implements OnInit {
         let modalTitle = document.getElementById("type-title");
         let modalBody = document.getElementById("type-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Config");
+            modalTitle.replaceChildren($localize`Config`);
         }
         if(modalBody != null) {
             let lbNamespaceInput = document.getElementById("type-namespace");
@@ -265,7 +265,7 @@ export class LoadBalancersComponent implements OnInit {
         }
 
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Load Balancer");
+            modalTitle.replaceChildren($localize`New Load Balancer`);
             
         }
         

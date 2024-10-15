@@ -50,7 +50,7 @@ export class VmlistComponent implements OnInit {
         await this.checkNetwork();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Virtual Machines");
+            navTitle.replaceChildren($localize`Virtual Machines`);
         }
     }
 
@@ -976,7 +976,7 @@ export class VmlistComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let vmNameInput = document.getElementById("delete-name");
@@ -1028,7 +1028,7 @@ export class VmlistComponent implements OnInit {
         let modalTitle = document.getElementById("type-title");
         let modalBody = document.getElementById("type-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Change VM Type");
+            modalTitle.replaceChildren($localize`Change VM Type`);
         }
         if(modalBody != null) {
             let vmNameInput = document.getElementById("type-vm");

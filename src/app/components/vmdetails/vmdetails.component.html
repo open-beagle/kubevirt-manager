@@ -12,93 +12,93 @@
             <div class="card">
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#overview" data-toggle="tab">Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#details" data-toggle="tab">Details</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#networking" data-toggle="tab">Networking</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#disks" data-toggle="tab">Disks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#logging" data-toggle="tab">Logs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#vmmonitoring" data-toggle="tab" *ngIf="promCheck">Monitoring</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#vmconsole" data-toggle="tab">Console</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#overview" data-toggle="tab" i18n>Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#details" data-toggle="tab" i18n>Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#networking" data-toggle="tab" i18n>Networking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#disks" data-toggle="tab" i18n>Disks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#logging" data-toggle="tab" i18n>Logs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vmmonitoring" data-toggle="tab" *ngIf="promCheck" i18n>Monitoring</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vmconsole" data-toggle="tab" i18n>Console</a></li>
                   </ul>
                 </div>
                 <div class="card-body">
                   <div class="tab-content">
                     <!-- Overview -->
                     <div class="active tab-pane" id="overview">
-                       <dt>Metadata</dt>
+                       <dt i18n>Metadata</dt>
                        <br>
-                       <dd>Name: {{activeVm.name}} </dd>
-                       <dd>Namespace: {{activeVm.namespace}} </dd>
-                       <dd>Labels:</dd>
+                       <dd><ng-container i18n>Name:</ng-container> {{activeVm.name}} </dd>
+                       <dd><ng-container i18n>Namespace:</ng-container> {{activeVm.namespace}} </dd>
+                       <dd><ng-container i18n>Labels:</ng-container></dd>
                        <ul *ngFor="let thisLabel of activeVm.labels | keyvalue">
                            <li>{{thisLabel.key}} : {{thisLabel.value}}</li>
                        </ul>
                        <hr>
-                       <dt>Status</dt>
+                       <dt i18n>Status</dt>
                        <br>
-                       <dd>Running: {{activeVm.running}} </dd>
-                       <dd>Status: {{activeVm.printableStatus}}</dd>
-                       <dd>Created At: {{activeVm.creationTimestamp}} </dd>
+                       <dd><ng-container i18n>Running:</ng-container> {{activeVm.running}} </dd>
+                       <dd><ng-container i18n>Status:</ng-container> {{activeVm.printableStatus}}</dd>
+                       <dd><ng-container i18n>Created At:</ng-container> {{activeVm.creationTimestamp}} </dd>
                     </div>
                     <!-- Details -->
                     <div class="tab-pane" id="details">
                         <!-- Custom VM -->
                         <div *ngIf="customTemplate; else vmTemplated">
                           <dt>
-                            General Hardware
+                            <ng-container i18n>General Hardware</ng-container>
                             <a class="btn float-right" title="Edit...">
                                 <i class="fas fa-pen" (click)="showResize(activeVm.sockets, activeVm.cores, activeVm.threads, activeVm.memory)"></i>
                             </a>
                           </dt>
                           <br>
-                          <dd>Instance Type: {{activeVm.instType}} </dd>
-                          <dd>CPU Sockets: {{activeVm.sockets || 0}} </dd>
-                          <dd>CPU Cores: {{activeVm.cores || 0}} </dd>
-                          <dd>CPU Threads: {{activeVm.threads || 0}} </dd>
-                          <dd>Total VM Memory: {{activeVm.memory}} </dd>
-                          <dd>Firmware: {{activeVm.firmware}} </dd>
-                          <dd>Secure Boot: {{activeVm.secureBoot}} </dd>
+                          <dd><ng-container i18n>Instance Type:</ng-container> {{activeVm.instType}} </dd>
+                          <dd><ng-container i18n>CPU Sockets:</ng-container> {{activeVm.sockets || 0}} </dd>
+                          <dd><ng-container i18n>CPU Cores:</ng-container> {{activeVm.cores || 0}} </dd>
+                          <dd><ng-container i18n>CPU Threads:</ng-container> {{activeVm.threads || 0}} </dd>
+                          <dd><ng-container i18n>Total VM Memory:</ng-container> {{activeVm.memory}} </dd>
+                          <dd><ng-container i18n>Firmware:</ng-container> {{activeVm.firmware}} </dd>
+                          <dd><ng-container i18n>Secure Boot:</ng-container> {{activeVm.secureBoot}} </dd>
                        </div>
                        <!-- Templated VM -->
                        <ng-template #vmTemplated>
                           <dt>
-                            General Hardware
+                            <ng-container i18n>General Hardware</ng-container>
                             <a class="btn float-right" title="Edit...">
                                 <i class="fas fa-pen" (click)="showType()"></i>
                             </a>
                           </dt>
                           <br>
-                          <dd>Instance Type: {{activeVm.instType}} </dd>
-                          <dd>Total vCPU: {{activeVm.cores * activeVm.sockets * activeVm.threads || 0}}</dd>
-                          <dd>Total VM Memory: {{activeVm.memory}} </dd>
-                          <dd>Firmware: {{activeVm.firmware}} </dd>
-                          <dd>Secure Boot: {{activeVm.secureBoot}} </dd>
+                          <dd><ng-container i18n>Instance Type:</ng-container> {{activeVm.instType}} </dd>
+                          <dd><ng-container i18n>Total vCPU:</ng-container> {{activeVm.cores * activeVm.sockets * activeVm.threads || 0}}</dd>
+                          <dd><ng-container i18n>Total VM Memory:</ng-container> {{activeVm.memory}} </dd>
+                          <dd><ng-container i18n>Firmware:</ng-container> {{activeVm.firmware}} </dd>
+                          <dd><ng-container i18n>Secure Boot:</ng-container> {{activeVm.secureBoot}} </dd>
                        </ng-template>
                        <hr>
                        <div *ngIf="activeVm.vmi.running">
                             <dt>
-                                Instance Information
+                              <ng-container i18n>Instance Information</ng-container>
                             </dt>
                             <br>
-                            <dd>Operating System Id: {{activeVm.vmi.osId}} </dd>
-                            <dd>Operating System Name: {{activeVm.vmi.osName}} - {{activeVm.vmi.osPrettyName}}</dd>
-                            <dd>Operating System Version: {{activeVm.vmi.osVersion}} </dd>
-                            <dd>Operating System Kernel: {{activeVm.vmi.osKernRel}} - {{activeVm.vmi.osKernVer}} </dd>
+                            <dd><ng-container i18n>Operating System Id:</ng-container> {{activeVm.vmi.osId}} </dd>
+                            <dd><ng-container i18n>Operating System Name:</ng-container> {{activeVm.vmi.osName}} - {{activeVm.vmi.osPrettyName}}</dd>
+                            <dd><ng-container i18n>Operating System Version:</ng-container> {{activeVm.vmi.osVersion}} </dd>
+                            <dd><ng-container i18n>Operating System Kernel:</ng-container> {{activeVm.vmi.osKernRel}} - {{activeVm.vmi.osKernVer}} </dd>
                             <hr>
                        </div>
                        <dt>
-                        Execution
+                        <ng-container i18n>Execution</ng-container>
                         <!--<a class="btn float-right" title="Edit...">
                             <i class="fas fa-pen" (click)="showPc()"></i>
                         </a>-->
                        </dt>
                        <br>
-                       <dd>Priority Class: {{activeVm.priorityClass}}</dd>
+                       <dd><ng-container i18n>Priority Class:</ng-container> {{activeVm.priorityClass}}</dd>
                        <hr>
                     </div>
                     <!-- Networking -->
                     <div class="tab-pane" id="networking">
-                       <dt>Networking</dt>
+                       <dt><ng-container i18n>Networking</ng-container></dt>
                        <br>
                        <div class="card" *ngFor="let actualNet of activeVm.networkList">
                             <div class="card-header">
@@ -112,17 +112,17 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                    <li>Name: {{actualNet.name}}</li>
-                                    <li>Type: {{actualNet.type}}</li>
-                                    <li>Network: {{actualNet.network}}</li>
-                                    <li>IP Address: {{actualNet.ip}}</li>
+                                    <li><ng-container i18n>Name:</ng-container> {{actualNet.name}}</li>
+                                    <li><ng-container i18n>Type:</ng-container> {{actualNet.type}}</li>
+                                    <li><ng-container i18n>Network:</ng-container> {{actualNet.network}}</li>
+                                    <li><ng-container i18n>IP Address:</ng-container> {{actualNet.ip}}</li>
                             </div>
                        </div>
                     </div>
                     <!-- Disks -->
                     <div class="tab-pane" id="disks">
                        <dt>
-                            Disks
+                            <ng-container i18n>Disks</ng-container>
                             <a class="btn float-right" title="Hotplug...">
                                 <i class="fas fa-plus" (click)="showHotplug()"></i>
                             </a>
@@ -141,26 +141,26 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <li>Name: {{actualDisk.name}} </li>
-                                <li>Namespace: {{actualDisk.namespace}} </li>
-                                <li>Type: {{actualDisk.type}} </li>
-                                <li>BUS: {{actualDisk.bus}} </li>
-                                <li>Backend: {{actualDisk.backend}} </li>
-                                <li>Data Volume Name: {{actualDisk.dataVolume.name}} </li>
-                                <li>Data Volume Namespace: {{actualDisk.dataVolume.namespace}} </li>
-                                <li>Data Volume Source Type: {{actualDisk.dataVolume.source}} </li>
-                                <li>Data Volume Source Value: {{actualDisk.dataVolume.sourceValue}} </li>
-                                <li>Access Mode: {{actualDisk.accessMode}}</li>
-                                <li>Cache Mode: {{actualDisk.cacheMode}} </li>
-                                <li>Capacity: {{actualDisk.size}} </li>
-                                <li>Storage Class: {{actualDisk.storageClass}}</li>
-                                <li>Hotplugged: {{actualDisk.hotplug}}</li>
+                                <li><ng-container i18n>Name:</ng-container> {{actualDisk.name}} </li>
+                                <li><ng-container i18n>Namespace:</ng-container> {{actualDisk.namespace}} </li>
+                                <li><ng-container i18n>Type:</ng-container> {{actualDisk.type}} </li>
+                                <li><ng-container i18n>BUS:</ng-container> {{actualDisk.bus}} </li>
+                                <li><ng-container i18n>Backend:</ng-container> {{actualDisk.backend}} </li>
+                                <li><ng-container i18n>Data Volume Name:</ng-container> {{actualDisk.dataVolume.name}} </li>
+                                <li><ng-container i18n>Data Volume Namespace:</ng-container> {{actualDisk.dataVolume.namespace}} </li>
+                                <li><ng-container i18n>Data Volume Source Type:</ng-container> {{actualDisk.dataVolume.source}} </li>
+                                <li><ng-container i18n>Data Volume Source Value:</ng-container> {{actualDisk.dataVolume.sourceValue}} </li>
+                                <li><ng-container i18n>Access Mode:</ng-container> {{actualDisk.accessMode}}</li>
+                                <li><ng-container i18n>Cache Mode:</ng-container> {{actualDisk.cacheMode}} </li>
+                                <li><ng-container i18n>Capacity:</ng-container> {{actualDisk.size}} </li>
+                                <li><ng-container i18n>Storage Class:</ng-container> {{actualDisk.storageClass}}</li>
+                                <li><ng-container i18n>Hotplugged:</ng-container> {{actualDisk.hotplug}}</li>
                             </div>
                        </div>
                     </div>
                     <!-- VM Logging -->
                     <div class="tab-pane" id="logging">
-                        <dt>Logging</dt>
+                        <dt i18n>Logging</dt>
                         <br>
                         <div id="log-viewer" class="log-viewer">
                             <div id="log-stream" class="log-stream">
@@ -171,7 +171,7 @@
                      </div>
                     <!-- VM Monitoring -->
                     <div class="tab-pane" id="vmmonitoring">  
-                       <dt>Monitoring</dt>
+                       <dt i18n>Monitoring</dt>
                        <br>
                        <!-- PROMETHEUS: CPU -->
                        <div class="row">
@@ -179,7 +179,7 @@
                             <div class="card">
                                 <div class="card-header border-0">
                                     <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">CPU Usage</h3>
+                                        <h3 class="card-title" i18n>CPU Usage</h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -196,7 +196,7 @@
                             <div class="card">
                                 <div class="card-header border-0">
                                     <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">Memory Usage</h3>
+                                        <h3 class="card-title" i18n>Memory Usage</h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -215,7 +215,7 @@
                            <div class="card">
                                <div class="card-header border-0">
                                    <div class="d-flex justify-content-between">
-                                       <h3 class="card-title">Storage Usage</h3>
+                                       <h3 class="card-title" i18n>Storage Usage</h3>
                                    </div>
                                </div>
                                <div class="card-body">
@@ -232,7 +232,7 @@
                            <div class="card">
                                <div class="card-header border-0">
                                    <div class="d-flex justify-content-between">
-                                       <h3 class="card-title">Network Usage</h3>
+                                       <h3 class="card-title" i18n>Network Usage</h3>
                                    </div>
                                </div>
                                <div class="card-body">
@@ -250,7 +250,7 @@
                     <div class="tab-pane" id="vmconsole">  
                         <iframe width="100%" height="100%" frameBorder="0" style="height: 600px" [src]="urlSafe"></iframe>
                         <br>
-                        <p><a href="#" (click)='openNoVNC()' title="Open console...">Open Full noVNC Client</a></p>
+                        <p><a href="#" (click)='openNoVNC()' title="Open console..." i18n>Open Full noVNC Client</a></p>
                     </div>
                   </div>
                 </div>
@@ -268,20 +268,20 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="type-title">Type: {{activeVm.namespace}} - {{activeVm.name}}</h4>
+              <h4 class="modal-title" id="type-title"><ng-container i18n>Type:</ng-container> {{activeVm.namespace}} - {{activeVm.name}}</h4>
               <button type="button" class="close" (click)='hideComponent("modal-type")'>
                 <span aria-hidden="true">×</span>
               </button>
             </div>
             <div class="modal-body" id="type-value">
-              <label for="newType">Virtual Machine VM Type:</label>
+              <label for="newType" i18n>Virtual Machine VM Type:</label>
               <select #changevmtype class="custom-select rounded-0" name="changevm-type" id="changevm-type">
                   <option>Value 1</option>
               </select>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyType( changevmtype.value)">Save changes</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyType( changevmtype.value)" i18n>Save changes</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -296,37 +296,37 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="hotplug-title">Hotplug: {{activeVm.namespace}} - {{activeVm.name}}</h4>
+              <h4 class="modal-title" id="hotplug-title"><ng-container i18n>Hotplug:</ng-container> {{activeVm.namespace}} - {{activeVm.name}}</h4>
               <button type="button" class="close" (click)='hideComponent("modal-hotplug")'>
                 <span aria-hidden="true">×</span>
               </button>
             </div>
             <div class="modal-body" id="hotplug-value">
-              <label for="hotplugVolume">Volumes:</label>
+              <label for="hotplugVolume" i18n>Volumes:</label>
               <select #hotplugvolume class="custom-select rounded-0" name="hotplug-volume" id="hotplug-volume">
                   <option>Value 1</option>
               </select>
-              <label for="hotplugType">Type:</label>
+              <label for="hotplugType" i18n>Type:</label>
               <select #hotplugtype class="custom-select rounded-0" name="hotplug-type" id="hotplug-type">
                   <option selected value=disk>Disk</option>
                   <!-- <option value=cdrom>CDROM</option> not supported yet -->
                   <option value=lun>LUN</option>
               </select>
-              <label for="hotplugCache">Type:</label>
+              <label for="hotplugCache" i18n>Type:</label>
               <select #hotplugcache class="custom-select rounded-0" name="hotplug-cache" id="hotplug-cache">
                   <option selected value=none>CacheNone</option>
                   <option value=writethrough>CacheWriteThrough</option>
                   <option value=writeback>CacheWriteBack</option>
               </select>
-              <label for="hotplugReadOnly">Read Only:</label>
+              <label for="hotplugReadOnly" i18n>Read Only:</label>
               <select #hotplugreadonly class="custom-select rounded-0" name="hotplug-readonly" id="hotplug-readonly">
                 <option selected value="no">No</option>
                 <option value="yes">Yes</option>
             </select>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-hotplug")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyHotplug(hotplugvolume.value, hotplugtype.value, hotplugcache.value, hotplugreadonly.value)">Plug</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-hotplug")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyHotplug(hotplugvolume.value, hotplugtype.value, hotplugcache.value, hotplugreadonly.value)" i18n>Plug</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -341,7 +341,7 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="unplug-title">Unplug Volume</h4>
+              <h4 class="modal-title" id="unplug-title" i18n>Unplug Volume</h4>
               <button type="button" class="close" (click)='hideComponent("modal-unplug")'>
                 <span aria-hidden="true">×</span>
               </button>
@@ -351,8 +351,8 @@
               <p>BODY_TEMPLATE</p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-unplug")'>Close</button>
-              <button type="button" class="btn btn-danger" (click)='applyUnplug()'>Unplug</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-unplug")' i18n>Close</button>
+              <button type="button" class="btn btn-danger" (click)='applyUnplug()' i18n>Unplug</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -367,24 +367,24 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="resize-title">Resize: {{activeVm.namespace}} - {{activeVm.name}}</h4>
+              <h4 class="modal-title" id="resize-title"><ng-container i18n>Resize:</ng-container> {{activeVm.namespace}} - {{activeVm.name}}</h4>
               <button type="button" class="close" (click)='hideComponent("modal-resize")'>
                 <span aria-hidden="true">×</span>
               </button>
             </div>
             <div class="modal-body" id="resize-value">
-              <label for="resize-sockets">Sockets:</label>
+              <label for="resize-sockets" i18n>Sockets:</label>
               <input #resizeSockets type="number" class="form-control" id="resize-sockets" name="resize-sockets">
-              <label for="resize-cores">Cores:</label>
+              <label for="resize-cores" i18n>Cores:</label>
               <input #resizeCores type="number" class="form-control" id="resize-cores" name="resize-cores">
-              <label for="resize-threads">Threads:</label>
+              <label for="resize-threads" i18n>Threads:</label>
               <input #resizeThreads type="number" class="form-control" id="resize-threads" name="resize-threas">
-              <label for="resize-memory">Memory (in GB):</label>
+              <label for="resize-memory" i18n>Memory (in GB):</label>
               <input #resizeMemory type="number" class="form-control" id="resize-memory" name="resize-memory">
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyResize(resizeSockets.value, resizeCores.value, resizeThreads.value, resizeMemory.value)">Save changes</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyResize(resizeSockets.value, resizeCores.value, resizeThreads.value, resizeMemory.value)" i18n>Save changes</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -399,20 +399,20 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="type-title">Priority Class: {{activeVm.namespace}} - {{activeVm.name}}</h4>
+              <h4 class="modal-title" id="type-title"><ng-container i18n>Priority Class:</ng-container> {{activeVm.namespace}} - {{activeVm.name}}</h4>
               <button type="button" class="close" (click)='hideComponent("modal-pc")'>
                 <span aria-hidden="true">×</span>
               </button>
             </div>
             <div class="modal-body" id="type-value">
-              <label for="newPriority">Priority Class:</label>
+              <label for="newPriority" i18n>Priority Class:</label>
               <select #changevmpc class="custom-select rounded-0" name="changevm-pc" id="changevm-pc">
                   <option>Value 1</option>
               </select>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-pc")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyPc(changevmpc.value)">Save changes</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-pc")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyPc(changevmpc.value)" i18n>Save changes</button>
             </div>
           </div>
           <!-- /.modal-content -->

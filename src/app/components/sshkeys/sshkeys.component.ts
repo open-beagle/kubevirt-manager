@@ -27,7 +27,7 @@ export class SSHKeysComponent implements OnInit {
         await this.getNamespaces();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("SSH Keys");
+            navTitle.replaceChildren($localize`SSH Keys`);
         }
     }
 
@@ -78,7 +78,7 @@ export class SSHKeysComponent implements OnInit {
         let modalTitle = document.getElementById("new-title");
         let selectorNamespacesField = document.getElementById("new-key-namespace");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New SSH Key");
+            modalTitle.replaceChildren($localize`New SSH Key`);
         }
 
          /* Load Namespace List and Set Selector */
@@ -143,7 +143,7 @@ export class SSHKeysComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let keyNameInput = document.getElementById("delete-name");

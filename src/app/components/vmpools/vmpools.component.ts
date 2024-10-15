@@ -47,7 +47,7 @@ export class VMPoolsComponent implements OnInit {
         await this.checkNetwork();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Virtual Machine Pools");
+            navTitle.replaceChildren($localize`Virtual Machine Pools`);
         }
     }
 
@@ -257,7 +257,7 @@ export class VMPoolsComponent implements OnInit {
          * to avoid delays
          */
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Virtual Machine Pool");
+            modalTitle.replaceChildren($localize`New Virtual Machine Pool`);
         }
         if(modalDiv != null) {
             modalDiv.setAttribute("class", "modal fade show");
@@ -1016,7 +1016,7 @@ export class VMPoolsComponent implements OnInit {
         let modalTitle = document.getElementById("delete-title");
         let modalBody = document.getElementById("delete-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let poolNameInput = document.getElementById("delete-name");
@@ -1067,7 +1067,7 @@ export class VMPoolsComponent implements OnInit {
         let modalTitle = document.getElementById("deletevm-title");
         let modalBody = document.getElementById("deletevm-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let vmNameInput = document.getElementById("deletevm-name");
@@ -1180,7 +1180,7 @@ export class VMPoolsComponent implements OnInit {
         let modalTitle = document.getElementById("type-title");
         let modalBody = document.getElementById("type-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Change Pool Type");
+            modalTitle.replaceChildren($localize`Change Pool Type`);
         }
         if(modalBody != null) {
             let poolNameInput = document.getElementById("type-pool");

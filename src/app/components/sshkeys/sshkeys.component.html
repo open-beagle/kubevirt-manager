@@ -6,7 +6,7 @@
           <div class="card-header">
             <h3 class="card-title">
               <i class="fas fa-key"></i>
-              &nbsp;&nbsp;SSH Keys
+              &nbsp;&nbsp;<ng-container i18n>SSH Keys</ng-container>
             </h3>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" (click)="showNew()" title="New Key...">
@@ -19,10 +19,10 @@
               <thead>
                 <tr>
                   <th style="width: 10px">&nbsp;</th>
-                  <th style="width: 60px">Namespace</th>
-                  <th style="width: 100px">Name</th>
-                  <th style="width: 150px">Created At</th>
-                  <th style="width: 20px">Actions</th>
+                  <th style="width: 60px" i18n>Namespace</th>
+                  <th style="width: 100px" i18n>Name</th>
+                  <th style="width: 150px" i18n>Created At</th>
+                  <th style="width: 20px" i18n>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -59,18 +59,18 @@
             </div>
             <input type="hidden" id="new-node" name="new-node" value="">
             <div class="modal-body" id="new-value">
-                <label for="newkeyname">Name:</label>
+                <label for="newkeyname" i18n>Name:</label>
                 <input #newkeyname type="text" class="form-control" id="new-key-name" name="new-key-name" placeholder="name">
-                <label for="newkeynamespace">Namespace:</label>
+                <label for="newkeynamespace" i18n>Namespace:</label>
                 <select #newkeynamespace class="custom-select rounded-0" name="new-key-namespace" id="new-key-namespace">
                     <option>Value 1</option>
                 </select>
-                <label for="newkeyvalue">Value:</label>
+                <label for="newkeyvalue" i18n>Value:</label>
                 <textarea #newkeyvalue class="form-control" rows="3" cols="10" id="new-key-value" name="new-key-value"></textarea>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyNew(newkeyname.value, newkeynamespace.value, newkeyvalue.value)">Create</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyNew(newkeyname.value, newkeynamespace.value, newkeyvalue.value)" i18n>Create</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -96,8 +96,8 @@
                 <p>BODY_TEMPLATE</p>
                 </div>
                 <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")'>Close</button>
-                <button type="button" class="btn btn-danger" (click)="applyDelete()">Delete</button>
+                <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")' i18n>Close</button>
+                <button type="button" class="btn btn-danger" (click)="applyDelete()" i18n>Delete</button>
                 </div>
             </div>
             <!-- /.modal-content -->

@@ -58,7 +58,7 @@ export class KClusterDetailsComponent implements OnInit {
         await this.loadLoadBalancers();
         await this.loadClusterImages();
         if(navTitle != null) {
-            navTitle.replaceChildren("Kubernetes Cluster Details");
+            navTitle.replaceChildren($localize`Kubernetes Cluster Details`);
         }
     }
 
@@ -719,7 +719,7 @@ export class KClusterDetailsComponent implements OnInit {
         }
 
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Change Control Plane Type");
+            modalTitle.replaceChildren($localize`Change Control Plane Type`);
         }
         if(modalDiv != null) {
             modalDiv.setAttribute("class", "modal fade show");
@@ -970,7 +970,7 @@ export class KClusterDetailsComponent implements OnInit {
         let modalTitle = document.getElementById("delete-wp-title");
         let modalBody = document.getElementById("delete-wp-value");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Delete");
+            modalTitle.replaceChildren($localize`Delete`);
         }
         if(modalBody != null) {
             let wpNameInput = document.getElementById("delete-wp-name");
@@ -1484,7 +1484,7 @@ export class KClusterDetailsComponent implements OnInit {
         }
 
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Node Pool");
+            modalTitle.replaceChildren($localize`New Node Pool`);
         }
 
 

@@ -2,6 +2,9 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "cli": {
+    "analytics": false
+  },
   "projects": {
     "kubevirtmgr-webui": {
       "projectType": "application",
@@ -9,6 +12,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "zh": "./i18n/zh/messages.zh.xlf"
+        },
+        "sourceLocale": "en-US"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -21,7 +30,8 @@
             },
             "index": "src/index.html",
             "polyfills": [
-              "src/polyfills.ts"
+              "src/polyfills.ts",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -32,7 +42,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "browser": "src/main.ts",
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {
@@ -62,9 +72,11 @@
                   "inlineCritical": false
                 },
                 "fonts": true
-              }
+              },
+              "localize": ["zh"]
             },
             "development": {
+              "localize": ["zh"],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
@@ -95,7 +107,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [

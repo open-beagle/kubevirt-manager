@@ -6,7 +6,7 @@
           <div class="card-header">
             <h3 class="card-title">
               <i class="fas fa-sitemap"></i>
-              &nbsp;&nbsp;Load Balancers
+              &nbsp;&nbsp;<ng-container i18n>Load Balancers</ng-container>
             </h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" (click)="showNew()" title="New Load Balancer...">
@@ -19,16 +19,16 @@
                 <thead>
                   <tr>
                     <th style="width: 10px">&nbsp;</th>
-                    <th style="width: 35px">Namespace</th>
-                    <th style="width: 70px">Name</th>
-                    <th style="width: 40px">Type</th>
-                    <th style="width: 20px">ClusterIP</th>
-                    <th style="width: 20px">Load Balancer</th>
-                    <th style="width: 20px">Protocol</th>
-                    <th style="width: 60px">Port</th>
-                    <th style="width: 80px">Target Port</th>
-                    <th style="width: 80px">Target Resource</th>
-                    <th style="width: 90px">Actions</th>
+                    <th style="width: 35px"><ng-container i18n>Namespace</ng-container></th>
+                    <th style="width: 70px"><ng-container i18n>Name</ng-container></th>
+                    <th style="width: 40px"><ng-container i18n>Type</ng-container></th>
+                    <th style="width: 20px"><ng-container i18n>ClusterIP</ng-container></th>
+                    <th style="width: 20px"><ng-container i18n>Load Balancer</ng-container></th>
+                    <th style="width: 20px"><ng-container i18n>Protocol</ng-container></th>
+                    <th style="width: 60px"><ng-container i18n>Port</ng-container></th>
+                    <th style="width: 80px"><ng-container i18n>Target Port</ng-container></th>
+                    <th style="width: 80px"><ng-container i18n>Target Resource</ng-container></th>
+                    <th style="width: 90px"><ng-container i18n>Actions</ng-container></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -75,24 +75,24 @@
             </div>
             <div class="modal-body" id="new-value">
               <ul class="nav flex-column" id="new-cards">
-                <label for="newlb-name">Name:</label>
+                <label for="newlb-name" i18n>Name:</label>
                 <input #newlbname type="text" class="form-control" id="newlb-name" name="newlb-name">
-                <label for="newlb-namespaces">Namespace:</label>
+                <label for="newlb-namespaces" i18n>Namespace:</label>
                 <select #newlbnamespace class="custom-select rounded-0" name="newlb-namespace" id="newlb-namespace" (change)="onChangeNamespaceOrResourceType(newlbnamespace.value, newlbtargetresourcetype.value)">
                   <option>Value 1</option>
                 </select>
-                <label for="newlb-targetresourcetype">Target Resource Type:</label>
+                <label for="newlb-targetresourcetype" i18n>Target Resource Type:</label>
                 <select #newlbtargetresourcetype class="custom-select rounded-0" name="newlb-targetresourcetype" id="newlb-targetresourcetype" (change)="onChangeNamespaceOrResourceType(newlbnamespace.value, newlbtargetresourcetype.value)">
                     <option value="vminstance">VM Instance</option>
                     <option value="vmpool">VM Pool</option>
                 </select>
-                <label for="newlb-targetresource">Target Resource:</label>
+                <label for="newlb-targetresource" i18n>Target Resource:</label>
                 <select #newlbtargetresource class="custom-select rounded-0" name="newlb-targetresource" id="newlb-targetresource">
                 </select>
                 <div class="row">&nbsp;</div>
                 <div class="row">
                     <br>
-                    <label for="newlb-annotations">Annotations:</label>
+                    <label for="newlb-annotations" i18n>Annotations:</label>
                     <br>
                     <table class="table table-sm" style="vertical-align: middle !important;">
                         <thead>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="row">
                     <br>
-                    <label for="newlb-labels">Labels:</label>
+                    <label for="newlb-labels" i18n>Labels:</label>
                     <br>
                     <table class="table table-sm" style="vertical-align: middle !important;">
                         <thead>
@@ -138,23 +138,23 @@
                 </div>
                 <div class="row">
                   <div class="col-4" name="newlb-target-type-col">
-                    <label for="newlb-targettype">Type:</label>
+                    <label for="newlb-targettype" i18n>Type:</label>
                     <select #newlbtargettype class="custom-select rounded-0" name="newlb-targettype" id="newlb-targettype">
-                      <option value="ClusterIP">ClusterIP</option>
-                      <option value="LoadBalancer">LoadBalancer</option>
-                      <option value="NodePort">NodePort</option>
+                      <option value="ClusterIP" i18n>ClusterIP</option>
+                      <option value="LoadBalancer" i18n>LoadBalancer</option>
+                      <option value="NodePort" i18n>NodePort</option>
                     </select>
                   </div>
                   <div class="col-3">
-                    <label for="newlb-port">Port:</label>
+                    <label for="newlb-port" i18n>Port:</label>
                     <input #newlbport type="number" class="form-control" name="newlb-port" id="newlb-port">
                   </div>
                   <div class="col-3">
-                    <label for="newvm-diskonevalue">Target Port:</label>
+                    <label for="newvm-diskonevalue" i18n>Target Port:</label>
                     <input #newlbtargetport type="number" class="form-control" name="newlb-targetport" id="newlb-targetport">
                   </div>
                   <div class="col-2">
-                    <label for="newlb-targetproto">Type:</label>
+                    <label for="newlb-targetproto" i18n>Type:</label>
                     <select #newlbtargetproto class="custom-select rounded-0" name="newlb-targetproto" id="newlb-targetproto">
                       <option value="TCP">TCP</option>
                       <option value="UDP">UDP</option>
@@ -165,8 +165,8 @@
               </ul>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")'>Close</button>
-                <button type="button" class="btn btn-primary" (click)="applyNew(newlbname.value, newlbnamespace.value, newlbtargetresourcetype.value, newlbtargetresource.value, newlbannotationskeyone.value, newlbannotationsvalueone.value, newlbannotationskeytwo.value, newlbannotationsvaluetwo.value, newlblabelkeyone.value, newlblabelvalueone.value, newlblabelkeytwo.value, newlblabelvaluetwo.value, newlbtargettype.value, newlbport.value, newlbtargetport.value, newlbtargetproto.value)">Create</button>
+                <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")' i18n>Close</button>
+                <button type="button" class="btn btn-primary" (click)="applyNew(newlbname.value, newlbnamespace.value, newlbtargetresourcetype.value, newlbtargetresource.value, newlbannotationskeyone.value, newlbannotationsvalueone.value, newlbannotationskeytwo.value, newlbannotationsvaluetwo.value, newlblabelkeyone.value, newlblabelvalueone.value, newlblabelkeytwo.value, newlblabelvaluetwo.value, newlbtargettype.value, newlbport.value, newlbtargetport.value, newlbtargetproto.value)" i18n>Create</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -216,7 +216,7 @@
             <input type="hidden" id="type-name" name="type-name" value="">
             <input type="hidden" id="type-namespace" name="type-namespace" value="">
             <div class="modal-body" id="type-value">
-              <label for="newType">Load Balancer Type:</label>
+              <label for="newType" i18n>Load Balancer Type:</label>
               <select #changelbtype class="custom-select rounded-0" name="changelb-type" id="changelb-type">
                   <option value="ClusterIP">ClusterIP</option>
                   <option value="LoadBalancer">LoadBalancer</option>
@@ -224,8 +224,8 @@
               </select>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)="applyType(changelbtype.value)">Save changes</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-type")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)="applyType(changelbtype.value)" i18n>Save changes</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -251,8 +251,8 @@
               <p>BODY_TEMPLATE</p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")'>Close</button>
-              <button type="button" class="btn btn-danger" (click)="applyDelete()">Delete</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")' i18n>Close</button>
+              <button type="button" class="btn btn-danger" (click)="applyDelete()" i18n>Delete</button>
             </div>
           </div>
           <!-- /.modal-content -->

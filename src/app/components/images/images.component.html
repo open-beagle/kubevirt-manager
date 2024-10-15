@@ -19,11 +19,11 @@
               <thead>
                 <tr>
                   <th style="width: 10px">&nbsp;</th>
-                  <th style="width: 60px">Namespace</th>
-                  <th style="width: 100px">Name</th>
-                  <th style="width: 20px">Type</th>
-                  <th style="width: 150px">Readable Name</th>
-                  <th style="width: 20px">Actions</th>
+                  <th style="width: 60px" i18n>Namespace</th>
+                  <th style="width: 100px" i18n>Name</th>
+                  <th style="width: 20px" i18n>Type</th>
+                  <th style="width: 150px" i18n>Readable Name</th>
+                  <th style="width: 20px" i18n>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,13 +34,13 @@
                     <td style="line-height: 2.2 !important;">{{thisImage.type}}</td>
                     <td style="line-height: 2.2 !important;">{{thisImage.readableName}}</td>
                     <td style="line-height: 0 !important;">
-                      <a class="btn" (click)="showInfo(thisImage.name, thisImage.namespace)" title="Info...">
+                      <a class="btn" (click)="showInfo(thisImage.name, thisImage.namespace)" i18n-title title="Info...">
                         <i class="fas fa-info" (click)="showInfo(thisImage.name, thisImage.namespace)"></i>
                       </a>
-                      <a class="btn" (click)="showEdit(thisImage.name, thisImage.namespace)" title="Edit...">
+                      <a class="btn" (click)="showEdit(thisImage.name, thisImage.namespace)" i18n-title title="Edit...">
                         <i class="fas fa-pen" (click)="showEdit(thisImage.name, thisImage.namespace)"></i>
                       </a>
-                      <a class="btn" (click)="showDelete(thisImage.name, thisImage.namespace)" title="Delete...">
+                      <a class="btn" (click)="showDelete(thisImage.name, thisImage.namespace)" i18n-title title="Delete...">
                         <i class="fas fa-trash" (click)="showDelete(thisImage.name, thisImage.namespace)"></i>
                       </a>
                     </td>
@@ -67,17 +67,17 @@
                 </div>
                 <input type="hidden" id="new-node" name="new-node" value="">
                 <div class="modal-body" id="new-value">
-                    <label for="newimagename">Name:</label>
+                    <label for="newimagename" i18n>Name:</label>
                     <input #newimagename type="text" class="form-control" id="new-image-name" name="new-image-name" placeholder="name">
-                    <label for="newimagenamespace">Namespace:</label>
+                    <label for="newimagenamespace" i18n>Namespace:</label>
                     <select #newimagenamespace class="custom-select rounded-0" name="new-image-namespace" id="new-image-namespace">
                         <option>Value 1</option>
                     </select>
-                    <label for="newimagereadablename">Readable Name:</label>
+                    <label for="newimagereadablename" i18n>Readable Name:</label>
                     <input #newimagereadablename type="text" class="form-control" id="new-image-readablename" name="new-image-readablename" placeholder="Readable Name of the image">
-                    <label for="newimagereadabledescription">Description:</label>
+                    <label for="newimagereadabledescription" i18n>Description:</label>
                     <input #newimagereadabledescription type="text" class="form-control" id="new-image-readabledescription" name="new-image-readabledescription" placeholder="Optional description of the image">
-                    <label for="newimagetype">Type:</label>
+                    <label for="newimagetype" i18n>Type:</label>
                     <select #newimagetype class="custom-select rounded-0" name="new-image-type" id="new-image-type" (change)="onChangeImageType(newimagetype.value)">
                         <option value="http">HTTP(s)</option>
                         <option value="registry">Registry</option>
@@ -86,12 +86,12 @@
                         <option value="pvc">PVC</option>
                     </select>
                     <input #newimagecredentials type="hidden" value="">
-                    <label for="newimagevalue">Value:</label>
+                    <label for="newimagevalue" i18n>Value:</label>
                     <input #newimagevalue type="text" class="form-control" id="new-image-value" name="new-image-value" placeholder="http(s)://example.com/image-file.qcow2.gz">
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")'>Close</button>
-                    <button type="button" class="btn btn-primary" (click)="applyNew(newimagename.value, newimagenamespace.value , newimagetype.value, newimagecredentials.value, newimagereadablename.value, newimagereadabledescription.value, newimagevalue.value)">Create</button>
+                    <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")' i18n>Close</button>
+                    <button type="button" class="btn btn-primary" (click)="applyNew(newimagename.value, newimagenamespace.value , newimagetype.value, newimagecredentials.value, newimagereadablename.value, newimagereadabledescription.value, newimagevalue.value)" i18n>Create</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -117,8 +117,8 @@
                 <p>BODY_TEMPLATE</p>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")'>Close</button>
-                <button type="button" class="btn btn-danger" (click)="applyDelete()">Delete</button>
+                <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")' i18n>Close</button>
+                <button type="button" class="btn btn-danger" (click)="applyDelete()" i18n>Delete</button>
             </div>
             </div>
             <!-- /.modal-content -->
@@ -145,7 +145,7 @@
                 </ul>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-default" (click)='hideComponent("modal-info")'>Close</button>
+                <button type="button" class="btn btn-default" (click)='hideComponent("modal-info")' i18n>Close</button>
             </div>
             </div>
             <!-- /.modal-content -->
@@ -171,17 +171,17 @@
                     <input type="hidden" id="image-namespace" name="image-namespace" value="">
                     <input type="hidden" id="image-name" name="image-name" value="">
                     <input type="hidden" id="image-type" name="image-type" value="">
-                    <label for="image-readable-name">Image Readable Name</label>
+                    <label for="image-readable-name" i18n>Image Readable Name</label>
                     <input #imagereadablename type="text" class="form-control" id="image-readable-name" name="image-readable-name" placeholder="Readable Name">
                     <label for="image-description">Description</label>
                     <input #imagedescription type="text" class="form-control" id="image-description" name="image-description" placeholder="Image Description">
-                    <label for="image-value">Value</label>
+                    <label for="image-value" i18n>Value</label>
                     <input #imagevalue type="text" class="form-control" id="image-value" name="image-value" placeholder="0">
                 </div>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" (click)='hideComponent("modal-edit")'>Close</button>
-                <button type="button" class="btn btn-primary" (click)='applyEdit(imagereadablename.value, imagedescription.value, imagevalue.value)'>Save</button>
+                <button type="button" class="btn btn-default" (click)='hideComponent("modal-edit")' i18n>Close</button>
+                <button type="button" class="btn btn-primary" (click)='applyEdit(imagereadablename.value, imagedescription.value, imagevalue.value)' i18n>Save</button>
             </div>
             </div>
             <!-- /.modal-content -->

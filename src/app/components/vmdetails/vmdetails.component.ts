@@ -67,7 +67,7 @@ export class VmdetailsComponent implements OnInit {
         this.loadNoVNC();
         let navTitle = document.getElementById("nav-title");
         if(navTitle != null) {
-            navTitle.replaceChildren("Virtual Machine Details");
+            navTitle.replaceChildren($localize`Virtual Machine Details`);
         }
     }
 

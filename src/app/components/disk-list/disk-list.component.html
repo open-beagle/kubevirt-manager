@@ -6,7 +6,7 @@
         <div class="card-header">
           <h3 class="card-title">
             <i class="fas fa-database"></i>
-            &nbsp;&nbsp;Data Volumes / Persistent Volumes
+            &nbsp;&nbsp;<ng-container i18n>Data Volumes / Persistent Volumes</ng-container>
           </h3>
           <div class="card-tools">
             <!--<button type="button" class="btn btn-tool">
@@ -22,14 +22,14 @@
             <thead>
               <tr>
                 <th style="width: 10px">&nbsp;</th>
-                <th style="width: 100px">Namespace</th>
-                <th style="width: 160px">Name</th>
-                <th style="width: 20px">Size</th>
-                <th style="width: 60px">Status</th>
-                <th style="width: 20px">Progress</th>
-                <th style="width: 100px">Storage Class</th>
-                <th style="width: 100px">Access Mode</th>                
-                <th style="width: 80px">Actions</th>
+                <th style="width: 100px" i18n>Namespace</th>
+                <th style="width: 160px" i18n>Name</th>
+                <th style="width: 20px" i18n>Size</th>
+                <th style="width: 60px" i18n>Status</th>
+                <th style="width: 20px" i18n>Progress</th>
+                <th style="width: 100px" i18n>Storage Class</th>
+                <th style="width: 100px" i18n>Access Mode</th>
+                <th style="width: 80px" i18n>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -82,13 +82,13 @@
             <div class="form-group">
               <input type="hidden" id="resize-namespace" name="resize-namespace" value="">
               <input type="hidden" id="resize-disk" name="resize-disk" value="">
-              <label for="resizeInput">New size in GB</label>
+              <label for="resizeInput" i18n>New size in GB</label>
               <input #resizeinput type="number" class="form-control" id="resize-input" name="resize-input" placeholder="0">
             </div>
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")'>Close</button>
-            <button type="button" class="btn btn-primary" (click)="applyResize(resizeinput.value)">Resize</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-resize")' i18n>Close</button>
+            <button type="button" class="btn btn-primary" (click)="applyResize(resizeinput.value)" i18n>Resize</button>
           </div>
         </div>
         <!-- /.modal-content -->
