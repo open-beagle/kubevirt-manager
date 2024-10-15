@@ -89,6 +89,7 @@ docker run -it --rm \
   registry.cn-qingdao.aliyuncs.com/wod/node:v20-alpine \
   bash .beagle/build.sh
 
+docker pull registry.cn-qingdao.aliyuncs.com/wod/kubevirt-manager:v1.4.1 && \
 docker run -it --rm \
   -v $PWD:/go/src/github.com/open-beagle/kubevirt-manager \
   -w /go/src/github.com/open-beagle/kubevirt-manager \
