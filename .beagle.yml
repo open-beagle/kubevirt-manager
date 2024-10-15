@@ -109,7 +109,7 @@ name: docker-zh
 
 trigger:
   branch:
-    - docker-zh
+    - dev-zh
 
 workspace:
   path: /go/src/github.com/open-beagle/kubevirt-manager
