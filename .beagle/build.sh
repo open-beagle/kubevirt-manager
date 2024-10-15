@@ -8,7 +8,8 @@ npm config set registry https://registry.npmmirror.com
 
 name=noVNC
 # version=v1.5.0
-if [ ! -d "$PWD/src/assets/noVNC" ]; then
+if [ ! -e "$PWD/src/assets/noVNC/vnc.html" ]; then
+  rm -rf $PWD/src/assets/noVNC
   git config --global http.proxy 'socks5://www.ali.wodcloud.com:1283'
   # git clone --recurse-submodules -b ${version} https://github.com/novnc/noVNC.git $PWD/src/assets/noVNC
   git clone --recurse-submodules https://github.com/novnc/noVNC.git $PWD/src/assets/noVNC
