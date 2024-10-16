@@ -1115,7 +1115,7 @@
       </trans-unit>
       <trans-unit id="3718532372189778601" datatype="html">
         <source>Data Volumes / Persistent Volumes</source>
-        <target>Data Volumes / Persistent Volumes</target>
+        <target>数据卷 / 云硬盘</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.html</context>
           <context context-type="linenumber">9</context>
@@ -1710,7 +1710,7 @@
       </trans-unit>
       <trans-unit id="414887388288176527" datatype="html">
         <source>Images</source>
-        <target>图像</target>
+        <target>系统镜像</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
           <context context-type="linenumber">32</context>
@@ -1722,6 +1722,7 @@
       </trans-unit>
       <trans-unit id="3731037417874848468" datatype="html">
         <source>New Image</source>
+        <target>新建镜像</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
           <context context-type="linenumber">145</context>
@@ -4195,7 +4196,7 @@
       </trans-unit>
       <trans-unit id="2748978740969662657" datatype="html">
         <source>kubevirt-manager</source>
-        <target>kubevirt 管理器</target>
+        <target>云原生虚拟化管理</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/side-menu/side-menu.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -5110,6 +5111,7 @@
       </trans-unit>
       <trans-unit id="1673504358621746261" datatype="html">
         <source>Virtual Machine Pools</source>
+        <target>虚拟机池</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmpools/vmpools.component.ts</context>
           <context context-type="linenumber">50</context>
