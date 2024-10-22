@@ -247,35 +247,35 @@ export class ImagesComponent implements OnInit {
         clearInterval(this.myInterval);
         let myInnerHTML = "";
         let imageData = await lastValueFrom(this.kubevirtMgrService.getImage(namespace, name));
-        myInnerHTML += "<li class=\"nav-item\">Name: <span class=\"float-right badge bg-primary\">" + imageData.metadata["name"] + "</span></li>";
-        myInnerHTML += "<li class=\"nav-item\">Namespace: <span class=\"float-right badge bg-primary\">" + imageData.metadata["namespace"] + "</span></li>";
-        myInnerHTML += "<li class=\"nav-item\">Creation Time: <span class=\"float-right badge bg-primary\">" + new Date(imageData.metadata["creationTimestamp"]) + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Name` + ": <span class=\"float-right badge bg-primary\">" + imageData.metadata["name"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Namespace` + ": <span class=\"float-right badge bg-primary\">" + imageData.metadata["namespace"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Creation Time` + ": <span class=\"float-right badge bg-primary\">" + new Date(imageData.metadata["creationTimestamp"]) + "</span></li>";
         myInnerHTML += "<br />"
-        myInnerHTML += "<li class=\"nav-item\">Readable Name: <span class=\"float-right badge bg-primary\">" + imageData.spec["readableName"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Readable Name` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["readableName"] + "</span></li>";
         if(imageData.spec["readableDescription"] != null && imageData.spec["readableDescription"] != "") {
-            myInnerHTML += "<li class=\"nav-item\">Description: <span class=\"float-right badge bg-primary\">" + imageData.spec["readableDescription"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Description` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["readableDescription"] + "</span></li>";
         }
         switch(imageData.spec["type"]) {
             case "http":
-                myInnerHTML += "<li class=\"nav-item\">Type: <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">URL: <span class=\"float-right badge bg-primary\">" + imageData.spec.http["url"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Type` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`URL` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec.http["url"] + "</span></li>";
                 break;
             case "gcs":
-                myInnerHTML += "<li class=\"nav-item\">Type: <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">URL: <span class=\"float-right badge bg-primary\">" + imageData.spec.gcs["url"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Type` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`URL` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec.gcs["url"] + "</span></li>";
                 break;
             case "s3":
-                myInnerHTML += "<li class=\"nav-item\">Type: <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">URL: <span class=\"float-right badge bg-primary\">" + imageData.spec.s3["url"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Type` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`URL` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec.s3["url"] + "</span></li>";
                 break;
             case "registry":
-                myInnerHTML += "<li class=\"nav-item\">Type: <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">URL: <span class=\"float-right badge bg-primary\">" + imageData.spec.registry["url"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Type` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`URL` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec.registry["url"] + "</span></li>";
                 break;
             case "pvc":
-                myInnerHTML += "<li class=\"nav-item\">Type: <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">PVC Name: <span class=\"float-right badge bg-primary\">" + imageData.spec.pvc["name"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">PVC Namespace: <span class=\"float-right badge bg-primary\">" + imageData.spec.pvc["namespace"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Type` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec["type"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`PVC Name` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec.pvc["name"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`PVC Namespace` + ": <span class=\"float-right badge bg-primary\">" + imageData.spec.pvc["namespace"] + "</span></li>";
                 break;
                 
         }
@@ -284,7 +284,7 @@ export class ImagesComponent implements OnInit {
         let modalTitle = document.getElementById("info-title");
         let modalBody = document.getElementById("info-cards");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Image: " + namespace + " - " + name);
+            modalTitle.replaceChildren($localize`Image: ` + namespace + " - " + name);
         }
         if(modalBody != null) {
             modalBody.innerHTML = myInnerHTML;

@@ -92,28 +92,28 @@ export class LoadBalancersComponent implements OnInit {
         let myInnerHTML = "";
         try {
             let data = await lastValueFrom(this.k8sService.getService(lbNamespace, lbName));
-            myInnerHTML += "<li class=\"nav-item\">Service: <span class=\"float-right badge bg-primary\">" + data.metadata["name"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Namespace: <span class=\"float-right badge bg-primary\">" + data.metadata["namespace"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Creation Time: <span class=\"float-right badge bg-primary\">" + data.metadata["creationTimestamp"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Type: <span class=\"float-right badge bg-primary\">" + data.spec["type"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">ClusterIP: <span class=\"float-right badge bg-primary\">" + data.spec["clusterIP"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Service` + ": <span class=\"float-right badge bg-primary\">" + data.metadata["name"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Namespace` + ": <span class=\"float-right badge bg-primary\">" + data.metadata["namespace"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Creation Time` + ": <span class=\"float-right badge bg-primary\">" + data.metadata["creationTimestamp"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Type` + ": <span class=\"float-right badge bg-primary\">" + data.spec["type"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`ClusterIP` + ": <span class=\"float-right badge bg-primary\">" + data.spec["clusterIP"] + "</span></li>";
 
-            myInnerHTML += "<li class=\"nav-item\">Protocol: <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].protocol + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Port: <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].port + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Target Port: <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].targetPort + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Protocol` + ": <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].protocol + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Port` + ": <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].port + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Target Port` + ": <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].targetPort + "</span></li>";
 
             if(data.spec.selector["kubevirt.io/vmpool"] != null) {
-                myInnerHTML += "<li class=\"nav-item\">Target VM Pool: <span class=\"float-right badge bg-primary\">" + data.spec.selector["kubevirt.io/vmpool"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Target VM Pool` + ": <span class=\"float-right badge bg-primary\">" + data.spec.selector["kubevirt.io/vmpool"] + "</span></li>";
             } else if(data.spec.selector["kubevirt.io/domain"] != null) {
-                myInnerHTML += "<li class=\"nav-item\">Target Instance: <span class=\"float-right badge bg-primary\">" + data.spec.selector["kubevirt.io/domain"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Target Instance` + ": <span class=\"float-right badge bg-primary\">" + data.spec.selector["kubevirt.io/domain"] + "</span></li>";
             } else if(data.spec.selector["cluster.x-k8s.io/cluster-name"] != null) {
-                myInnerHTML += "<li class=\"nav-item\">Target Cluster: <span class=\"float-right badge bg-primary\">" + data.spec.selector["cluster.x-k8s.io/cluster-name"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Target Cluster` + ": <span class=\"float-right badge bg-primary\">" + data.spec.selector["cluster.x-k8s.io/cluster-name"] + "</span></li>";
             }
 
             if(data.spec["type"].toLowerCase() == "loadbalancer" && data.status.loadBalancer.ingress[0].ip != null) {
-                myInnerHTML += "<li class=\"nav-item\">External IP: <span class=\"float-right badge bg-primary\">" + data.status.loadBalancer.ingress[0].ip + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`External IP` + ": <span class=\"float-right badge bg-primary\">" + data.status.loadBalancer.ingress[0].ip + "</span></li>";
             } if(data.spec["type"].toLowerCase() == "nodeport" && data.spec.ports[0].nodePort != null) {
-                myInnerHTML += "<li class=\"nav-item\">Node Port: <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].nodePort + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Node Port` + ": <span class=\"float-right badge bg-primary\">" + data.spec.ports[0].nodePort + "</span></li>";
             }
         } catch (e: any) {
             console.log(e);
@@ -123,7 +123,7 @@ export class LoadBalancersComponent implements OnInit {
         let modalTitle = document.getElementById("info-title");
         let modalBody = document.getElementById("info-cards");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Load Balancer: " + lbName);
+            modalTitle.replaceChildren($localize`Load Balancer: ` + lbName);
         }
         if(modalBody != null) {
             modalBody.innerHTML = myInnerHTML;

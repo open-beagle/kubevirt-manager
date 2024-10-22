@@ -388,8 +388,8 @@
                         <input #newpooluserdatausername type="text" class="form-control" id="newpool-userdata-username" name="newpool-userdata-username">
                         <label for="newpool-userdata-auth" i18n>Authentication:</label>
                         <select #newpooluserdataauth class="custom-select rounded-0" name="newpool-userdata-auth" id="newpool-userdata-auth" (change)="onChangeAuthType(newpooluserdataauth.value, newpoolnamespace.value)">
-                          <option value="password">User/Password</option>
-                          <option value="ssh">SSH Private Key</option>
+                          <option value="password" i18n>User/Password</option>
+                          <option value="ssh" i18n>SSH Private Key</option>
                         </select>
                         <div class="pane fade show" id="newpool-userdata-password-panel" name="newpool-userdata-password-panel" style="display: contents;" aria-hidden="false">
                           <label for="newpool-userdata-password" i18n>Password:</label>

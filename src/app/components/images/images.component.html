@@ -6,7 +6,7 @@
           <div class="card-header">
             <h3 class="card-title">
               <i class="fas fa-compact-disc"></i>
-              &nbsp;&nbsp;Images
+              &nbsp;&nbsp;<ng-container i18n>Images</ng-container>
             </h3>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" (click)="showNew()" title="New Image...">
@@ -173,7 +173,7 @@
                     <input type="hidden" id="image-type" name="image-type" value="">
                     <label for="image-readable-name" i18n>Image Readable Name</label>
                     <input #imagereadablename type="text" class="form-control" id="image-readable-name" name="image-readable-name" placeholder="Readable Name">
-                    <label for="image-description">Description</label>
+                    <label for="image-description" i18n>Description</label>
                     <input #imagedescription type="text" class="form-control" id="image-description" name="image-description" placeholder="Image Description">
                     <label for="image-value" i18n>Value</label>
                     <input #imagevalue type="text" class="form-control" id="image-value" name="image-value" placeholder="0">

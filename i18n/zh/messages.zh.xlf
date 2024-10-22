@@ -288,7 +288,7 @@
       </trans-unit>
       <trans-unit id="2976894969836582823" datatype="html">
         <source>Target CPU Utilization Threshold (%)</source>
-        <target>Target CPU Utilization Threshold (%)</target>
+        <target>目标CPU利用率阈值 (%)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/autoscale/autoscale.component.html</context>
           <context context-type="linenumber">90,91</context>
@@ -592,6 +592,7 @@
       </trans-unit>
       <trans-unit id="6556619292408822154" datatype="html">
         <source>New Scaling Group</source>
+        <target>新建扩展组</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/autoscale/autoscale.component.ts</context>
           <context context-type="linenumber">121</context>
@@ -844,6 +845,7 @@
       </trans-unit>
       <trans-unit id="1906735500091978707" datatype="html">
         <source>New Cluster Instance Type</source>
+        <target>新建集群实例类型</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cluster-instance-type-list/cluster-instance-type-list.component.ts</context>
           <context context-type="linenumber">155</context>
@@ -1226,6 +1228,7 @@
       </trans-unit>
       <trans-unit id="5812762536800711628" datatype="html">
         <source>New Blank Disk</source>
+        <target>新建磁盘</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
           <context context-type="linenumber">231</context>
@@ -1490,7 +1493,7 @@
       </trans-unit>
       <trans-unit id="7658402240953727096" datatype="html">
         <source>Name:</source>
-        <target>名字:</target>
+        <target>名称:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/images/images.component.html</context>
           <context context-type="linenumber">70,71</context>
@@ -1550,7 +1553,7 @@
       </trans-unit>
       <trans-unit id="4732891941320214780" datatype="html">
         <source>Readable Name:</source>
-        <target>阅读名字:</target>
+        <target>可读名称:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/images/images.component.html</context>
           <context context-type="linenumber">76,77</context>
@@ -1730,6 +1733,7 @@
       </trans-unit>
       <trans-unit id="2614607010577950577" datatype="html">
         <source>Overview</source>
+        <target>概述</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">15,16</context>
@@ -1875,6 +1879,7 @@
       </trans-unit>
       <trans-unit id="6352586522395723642" datatype="html">
         <source>Created At:</source>
+        <target>创建时间:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">47</context>
@@ -2316,7 +2321,7 @@
       </trans-unit>
       <trans-unit id="4522958352876632321" datatype="html">
         <source>Priority Class:</source>
-        <target>Priority Class:</target>
+        <target>优先级类:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">411,412</context>
@@ -2415,7 +2420,7 @@
       </trans-unit>
       <trans-unit id="8325193494691790176" datatype="html">
         <source>Size in GB:</source>
-        <target>大小 (in GB):</target>
+        <target>大小 (GB):</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">418,419</context>
@@ -2697,6 +2702,7 @@
       </trans-unit>
       <trans-unit id="7319200268013001049" datatype="html">
         <source>Operating System:</source>
+        <target>操作系统:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">473,474</context>
@@ -2727,7 +2733,7 @@
       </trans-unit>
       <trans-unit id="4667042979037077218" datatype="html">
         <source>Firmware:</source>
-        <target>Firmware:</target>
+        <target>固件:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">505,506</context>
@@ -2759,7 +2765,7 @@
       </trans-unit>
       <trans-unit id="6761450418831160781" datatype="html">
         <source>Secure Boot:</source>
-        <target>Secure Boot:</target>
+        <target>安全启动:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-details/kcluster-details.component.html</context>
           <context context-type="linenumber">512,513</context>
@@ -2882,6 +2888,7 @@
       </trans-unit>
       <trans-unit id="218403386307979629" datatype="html">
         <source>Metadata</source>
+        <target>元数据</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">25,26</context>
@@ -2897,7 +2904,7 @@
       </trans-unit>
       <trans-unit id="5998992150032590257" datatype="html">
         <source>Labels:</source>
-        <target>Labels:</target>
+        <target>标签:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">29</context>
@@ -2954,6 +2961,7 @@
       </trans-unit>
       <trans-unit id="7753632267179628337" datatype="html">
         <source>Phase:</source>
+        <target>阶段:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">47</context>
@@ -2972,6 +2980,7 @@
       </trans-unit>
       <trans-unit id="6931550162960216187" datatype="html">
         <source>General Hardware</source>
+        <target>通用硬件</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">56</context>
@@ -2999,6 +3008,7 @@
       </trans-unit>
       <trans-unit id="6937009022422636622" datatype="html">
         <source>Instance Type:</source>
+        <target>实例类型:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">59</context>
@@ -3026,6 +3036,7 @@
       </trans-unit>
       <trans-unit id="2041804942212535245" datatype="html">
         <source>CPU Sockets:</source>
+        <target>CPU插座:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">60</context>
@@ -3041,6 +3052,7 @@
       </trans-unit>
       <trans-unit id="2624557535384704709" datatype="html">
         <source>CPU Cores:</source>
+        <target>CPU核:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">61</context>
@@ -3056,6 +3068,7 @@
       </trans-unit>
       <trans-unit id="5522592745791273534" datatype="html">
         <source>CPU Threads:</source>
+        <target>CPU线程:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">62</context>
@@ -3071,6 +3084,7 @@
       </trans-unit>
       <trans-unit id="4963837523942211889" datatype="html">
         <source>Total VM Memory:</source>
+        <target>总虚拟机内存:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">63</context>
@@ -3098,6 +3112,7 @@
       </trans-unit>
       <trans-unit id="6044889947650699615" datatype="html">
         <source>Total vCPU:</source>
+        <target>总vCPU:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">77</context>
@@ -3113,6 +3128,7 @@
       </trans-unit>
       <trans-unit id="5648120485645865953" datatype="html">
         <source>Execution</source>
+        <target>执行</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">87</context>
@@ -3210,6 +3226,7 @@
       </trans-unit>
       <trans-unit id="1650264438808363160" datatype="html">
         <source>Disks</source>
+        <target>磁盘</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">100</context>
@@ -3271,6 +3288,7 @@
       </trans-unit>
       <trans-unit id="4068278776660038814" datatype="html">
         <source>Data Volume Name:</source>
+        <target>数据卷名称:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">109</context>
@@ -3294,6 +3312,7 @@
       </trans-unit>
       <trans-unit id="8825688275002515128" datatype="html">
         <source>Data Volume Namespace:</source>
+        <target>数据卷命名空间:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
           <context context-type="linenumber">110</context>
@@ -3616,6 +3635,7 @@
       </trans-unit>
       <trans-unit id="5028777105388019087" datatype="html">
         <source>Details</source>
+        <target>详情</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster/kcluster.component.html</context>
           <context context-type="linenumber">159,160</context>
@@ -3724,7 +3744,7 @@
       </trans-unit>
       <trans-unit id="6817133402332255232" datatype="html">
         <source>Pod CIDR</source>
-        <target>Pod CIDR</target>
+        <target>容器 CIDR</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/kcluster/kcluster.component.html</context>
           <context context-type="linenumber">237,238</context>
@@ -3944,7 +3964,7 @@
       </trans-unit>
       <trans-unit id="9059714960737426205" datatype="html">
         <source>Target Resource Type:</source>
-        <target>Target Resource Type:</target>
+        <target>目标资源类型:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.html</context>
           <context context-type="linenumber">84,85</context>
@@ -3952,7 +3972,7 @@
       </trans-unit>
       <trans-unit id="7831701611130145602" datatype="html">
         <source>Target Resource:</source>
-        <target>Target Resource:</target>
+        <target>目标资源:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.html</context>
           <context context-type="linenumber">89,90</context>
@@ -3960,7 +3980,7 @@
       </trans-unit>
       <trans-unit id="7854277517371008660" datatype="html">
         <source>Annotations:</source>
-        <target>Annotations:</target>
+        <target>注释:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.html</context>
           <context context-type="linenumber">95,96</context>
@@ -3984,7 +4004,7 @@
       </trans-unit>
       <trans-unit id="6167294183925653141" datatype="html">
         <source>Port:</source>
-        <target>Port:</target>
+        <target>端口:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.html</context>
           <context context-type="linenumber">149,150</context>
@@ -4016,7 +4036,7 @@
       </trans-unit>
       <trans-unit id="7853863959141214303" datatype="html">
         <source>Target Port:</source>
-        <target>Target Port:</target>
+        <target>目标端口:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.html</context>
           <context context-type="linenumber">153,154</context>
@@ -4024,7 +4044,7 @@
       </trans-unit>
       <trans-unit id="7639587135455617530" datatype="html">
         <source>Load Balancer Type:</source>
-        <target>Load Balancer Type:</target>
+        <target>负载均衡器类型:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.html</context>
           <context context-type="linenumber">219,220</context>
@@ -4092,6 +4112,7 @@
       </trans-unit>
       <trans-unit id="2892412979837680989" datatype="html">
         <source>Config</source>
+        <target>配置</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
           <context context-type="linenumber">200</context>
@@ -4103,6 +4124,7 @@
       </trans-unit>
       <trans-unit id="8622555845746568806" datatype="html">
         <source>New Load Balancer</source>
+        <target>新建负载均衡器</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
           <context context-type="linenumber">268</context>
@@ -4117,7 +4139,7 @@
       </trans-unit>
       <trans-unit id="1605455101862010019" datatype="html">
         <source>Hostname</source>
-        <target>Hostname</target>
+        <target>主机名</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/nodelist/nodelist.component.html</context>
           <context context-type="linenumber">14</context>
@@ -4125,7 +4147,7 @@
       </trans-unit>
       <trans-unit id="4764104020334215003" datatype="html">
         <source>Architecture</source>
-        <target>Architecture</target>
+        <target>架构</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/nodelist/nodelist.component.html</context>
           <context context-type="linenumber">15</context>
@@ -4133,7 +4155,7 @@
       </trans-unit>
       <trans-unit id="3337277588631228019" datatype="html">
         <source>Operating System</source>
-        <target>Operating System</target>
+        <target>操作系统</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/nodelist/nodelist.component.html</context>
           <context context-type="linenumber">16</context>
@@ -4161,6 +4183,7 @@
       </trans-unit>
       <trans-unit id="1606229364989423908" datatype="html">
         <source>Kernel</source>
+        <target>内核</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/nodelist/nodelist.component.html</context>
           <context context-type="linenumber">22</context>
@@ -4168,7 +4191,7 @@
       </trans-unit>
       <trans-unit id="6135014369745545268" datatype="html">
         <source>CRI Version</source>
-        <target>CRI Version</target>
+        <target>CRI 版本</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/nodelist/nodelist.component.html</context>
           <context context-type="linenumber">23</context>
@@ -4228,6 +4251,7 @@
       </trans-unit>
       <trans-unit id="8088217221973301193" datatype="html">
         <source>New SSH Key</source>
+        <target>新建SSH密钥</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sshkeys/sshkeys.component.ts</context>
           <context context-type="linenumber">81</context>
@@ -4235,6 +4259,7 @@
       </trans-unit>
       <trans-unit id="4804785061014590286" datatype="html">
         <source>Logs</source>
+        <target>日志</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">19,20</context>
@@ -4242,6 +4267,7 @@
       </trans-unit>
       <trans-unit id="3338661424985495365" datatype="html">
         <source>Monitoring</source>
+        <target>监控</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">20,21</context>
@@ -4253,6 +4279,7 @@
       </trans-unit>
       <trans-unit id="4455082220162392793" datatype="html">
         <source>Console</source>
+        <target>控制台</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">21,22</context>
@@ -4260,6 +4287,7 @@
       </trans-unit>
       <trans-unit id="3272151970152946507" datatype="html">
         <source>Running:</source>
+        <target>运行:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">39</context>
@@ -4271,6 +4299,7 @@
       </trans-unit>
       <trans-unit id="8766543515727166681" datatype="html">
         <source>Status:</source>
+        <target>状态:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">40</context>
@@ -4278,6 +4307,7 @@
       </trans-unit>
       <trans-unit id="8052916526219396555" datatype="html">
         <source>Instance Information</source>
+        <target>实例信息</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">80</context>
@@ -4285,6 +4315,7 @@
       </trans-unit>
       <trans-unit id="464485820018511414" datatype="html">
         <source>Operating System Id:</source>
+        <target>操作系统Id:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">83</context>
@@ -4292,6 +4323,7 @@
       </trans-unit>
       <trans-unit id="7718802606596376534" datatype="html">
         <source>Operating System Name:</source>
+        <target>操作系统名称:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">84</context>
@@ -4299,6 +4331,7 @@
       </trans-unit>
       <trans-unit id="6540823992128039880" datatype="html">
         <source>Operating System Version:</source>
+        <target>操作系统版本:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">85</context>
@@ -4306,6 +4339,7 @@
       </trans-unit>
       <trans-unit id="5098322810056267341" datatype="html">
         <source>Operating System Kernel:</source>
+        <target>操作系统内核:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">86</context>
@@ -4313,6 +4347,7 @@
       </trans-unit>
       <trans-unit id="7755409323657079166" datatype="html">
         <source>IP Address:</source>
+        <target>IP地址:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">118</context>
@@ -4327,6 +4362,7 @@
       </trans-unit>
       <trans-unit id="7406817623777988843" datatype="html">
         <source>Data Volume Source Type:</source>
+        <target>数据卷源类型:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">151</context>
@@ -4334,6 +4370,7 @@
       </trans-unit>
       <trans-unit id="5392534432471909198" datatype="html">
         <source>Data Volume Source Value:</source>
+        <target>数据卷源值:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">152</context>
@@ -4341,6 +4378,7 @@
       </trans-unit>
       <trans-unit id="5070048264054123285" datatype="html">
         <source>Hotplugged:</source>
+        <target>热插拔:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">157</context>
@@ -4348,6 +4386,7 @@
       </trans-unit>
       <trans-unit id="7015444653721086444" datatype="html">
         <source>Logging</source>
+        <target>日志记录</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">163,164</context>
@@ -4369,6 +4408,7 @@
       </trans-unit>
       <trans-unit id="3296523672396084754" datatype="html">
         <source>Open Full noVNC Client</source>
+        <target>打开完整noVNC客户端</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">253,254</context>
@@ -4390,6 +4430,7 @@
       </trans-unit>
       <trans-unit id="6966023801361883209" datatype="html">
         <source>Volumes:</source>
+        <target>数据卷:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">305,306</context>
@@ -4397,6 +4438,7 @@
       </trans-unit>
       <trans-unit id="8337152294114557064" datatype="html">
         <source>Read Only:</source>
+        <target>只读:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmdetails/vmdetails.component.html</context>
           <context context-type="linenumber">321,322</context>
@@ -4566,7 +4608,7 @@
       </trans-unit>
       <trans-unit id="812159698178335063" datatype="html">
         <source>Authentication:</source>
-        <target>Authentication:</target>
+        <target>身份验证:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmlist/vmlist.component.html</context>
           <context context-type="linenumber">396,397</context>
@@ -4598,7 +4640,7 @@
       </trans-unit>
       <trans-unit id="2637974915527140828" datatype="html">
         <source>SSH Key:</source>
-        <target>SSH Key:</target>
+        <target>SSH 密钥:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmlist/vmlist.component.html</context>
           <context context-type="linenumber">406,407</context>
@@ -5103,7 +5145,7 @@
       </trans-unit>
       <trans-unit id="3972935241645191137" datatype="html">
         <source>Replicas:</source>
-        <target>Replicas:</target>
+        <target>副本:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmpools/vmpools.component.html</context>
           <context context-type="linenumber">160,161</context>
@@ -5119,6 +5161,7 @@
       </trans-unit>
       <trans-unit id="5177275423844075098" datatype="html">
         <source>New Virtual Machine Pool</source>
+        <target>新建虚拟机池</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmpools/vmpools.component.ts</context>
           <context context-type="linenumber">260</context>
@@ -5129,6 +5172,247 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/vmpools/vmpools.component.ts</context>
           <context context-type="linenumber">1183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7594690210009892841" datatype="html">
+        <source>New Virtual Machine: </source>
+        <target>新建虚拟机: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/vmlist/vmlist.component.ts</context>
+          <context context-type="linenumber">254</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="470992180518945076" datatype="html">
+        <source>Disk Name</source>
+        <target>磁盘名称</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8580536543306101746" datatype="html">
+        <source>Size in GB</source>
+        <target>大小 (GB)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.html</context>
+          <context context-type="linenumber">155,156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7516791689282117352" datatype="html">
+        <source>Disk: </source>
+        <target>磁盘: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9101921903150873654" datatype="html">
+        <source>Data Volume:</source>
+        <target>数据卷: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5407207654254648227" datatype="html">
+        <source>Creation Time:</source>
+        <target>创建时间:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3851835432077743354" datatype="html">
+        <source>PVC:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7753632267179628337" datatype="html">
+        <source>Phase:</source>
+        <target>阶段:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/kcluster-pool-details/kcluster-pool-details.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7048398993223291020" datatype="html">
+        <source>PV:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="236877691017681214" datatype="html">
+        <source>Volume Mode:</source>
+        <target>数据卷模式:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6301257348428626939" datatype="html">
+        <source>NFS Server:</source>
+        <target>NFS服务器:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1341517067156163717" datatype="html">
+        <source>NFS Path:</source>
+        <target>NFS路径:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8237581636406867390" datatype="html">
+        <source>Reclaim Policy:</source>
+        <target>回收策略:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2218082343053095278" datatype="html">
+        <source>Service</source>
+        <target>服务</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3272442008270143839" datatype="html">
+        <source>Creation Time</source>
+        <target>创建时间</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7878806470055819505" datatype="html">
+        <source>Target Instance</source>
+        <target>目标实例</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8374768572070575800" datatype="html">
+        <source>Node Port</source>
+        <target>节点端口</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2119775590256771696" datatype="html">
+        <source>Load Balancer: </source>
+        <target>负载平衡器: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+        <target>描述</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8363133574831523590" datatype="html">
+        <source>Image: </source>
+        <target>镜像: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">287</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1174891546565206449" datatype="html">
+        <source>Driver:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/disk-list/disk-list.component.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6256641782220247222" datatype="html">
+        <source>Target VM Pool</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3516659445013268583" datatype="html">
+        <source>Target Cluster</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="477572005788454808" datatype="html">
+        <source>External IP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load-balancers/load-balancers.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6596843439102136797" datatype="html">
+        <source>Network Data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/vmlist/vmlist.component.html</context>
+          <context context-type="linenumber">194,195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="568386597522194928" datatype="html">
+        <source>SSH Private Key</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/vmpools/vmpools.component.html</context>
+          <context context-type="linenumber">392,393</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2375260419993138758" datatype="html">
+        <source>URL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">265</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">273</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4064648792245189410" datatype="html">
+        <source>PVC Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">277</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4948503594396368685" datatype="html">
+        <source>PVC Namespace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/images/images.component.ts</context>
+          <context context-type="linenumber">278</context>
         </context-group>
       </trans-unit>
     </body>

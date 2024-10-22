@@ -172,37 +172,37 @@ export class DiskListComponent implements OnInit {
         clearInterval(this.myInterval);
         let myInnerHTML = "";
         let volumedata = await lastValueFrom(this.dataVolumesService.getDataVolumeInfo(diskNamespace, diskName));
-        myInnerHTML += "<li class=\"nav-item\">Data Volume: <span class=\"float-right badge bg-primary\">" + volumedata.metadata["name"] + "</span></li>";
-        myInnerHTML += "<li class=\"nav-item\">Namespace: <span class=\"float-right badge bg-primary\">" + volumedata.metadata["namespace"] + "</span></li>";
-        myInnerHTML += "<li class=\"nav-item\">Creation Time: <span class=\"float-right badge bg-primary\">" + new Date(volumedata.metadata["creationTimestamp"]) + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Data Volume:` + "<span class=\"float-right badge bg-primary\">" + volumedata.metadata["name"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Namespace:` + "<span class=\"float-right badge bg-primary\">" + volumedata.metadata["namespace"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Creation Time:` + "<span class=\"float-right badge bg-primary\">" + new Date(volumedata.metadata["creationTimestamp"]) + "</span></li>";
         try {
-            myInnerHTML += "<li class=\"nav-item\">Storage Class: <span class=\"float-right badge bg-primary\">" + volumedata.spec.pvc["storageClassName"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Access Mode: <span class=\"float-right badge bg-primary\">" + volumedata.spec.pvc.accessModes[0] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Storage Class:` + "<span class=\"float-right badge bg-primary\">" + volumedata.spec.pvc["storageClassName"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Access Mode:` + "<span class=\"float-right badge bg-primary\">" + volumedata.spec.pvc.accessModes[0] + "</span></li>";
         } catch (e: any) {
-            myInnerHTML += "<li class=\"nav-item\">Storage Class: <span class=\"float-right badge bg-primary\">" + volumedata.spec.storage["storageClassName"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Access Mode: <span class=\"float-right badge bg-primary\">" + volumedata.spec.storage.accessModes[0] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Storage Class:` + "<span class=\"float-right badge bg-primary\">" + volumedata.spec.storage["storageClassName"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Access Mode:` + "<span class=\"float-right badge bg-primary\">" + volumedata.spec.storage.accessModes[0] + "</span></li>";
         }
-        myInnerHTML += "<li class=\"nav-item\">PVC: <span class=\"float-right badge bg-primary\">" + volumedata.status["claimName"] + "</span></li>";
-        myInnerHTML += "<li class=\"nav-item\">Phase: <span class=\"float-right badge bg-primary\">" + volumedata.status["phase"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`PVC:` + "<span class=\"float-right badge bg-primary\">" + volumedata.status["claimName"] + "</span></li>";
+        myInnerHTML += "<li class=\"nav-item\">" + $localize`Phase:` + "<span class=\"float-right badge bg-primary\">" + volumedata.status["phase"] + "</span></li>";
         if(volumedata.status["phase"].toLowerCase() == "succeeded") {
             let pvcdata = await lastValueFrom(this.k8sService.getPersistentVolumeClaimsInfo(diskNamespace, diskName));
             let pvdata = await lastValueFrom(this.k8sService.getPersistentVolumeInfo(pvcdata.spec["volumeName"]));
-            myInnerHTML += "<li class=\"nav-item\">PV: <span class=\"float-right badge bg-primary\">" + pvcdata.spec["volumeName"] + "</span></li>";
-            myInnerHTML += "<li class=\"nav-item\">Volume Mode: <span class=\"float-right badge bg-primary\">" + pvcdata.spec["volumeMode"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`PV:` + "<span class=\"float-right badge bg-primary\">" + pvcdata.spec["volumeName"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Volume Mode:` + "<span class=\"float-right badge bg-primary\">" + pvcdata.spec["volumeMode"] + "</span></li>";
             if(pvdata.spec.csi != null) {
-                myInnerHTML += "<li class=\"nav-item\">Driver: <span class=\"float-right badge bg-primary\">" + pvdata.spec.csi["driver"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`Driver:` + "<span class=\"float-right badge bg-primary\">" + pvdata.spec.csi["driver"] + "</span></li>";
             }
             if(pvdata.spec.nfs != null) {
-                myInnerHTML += "<li class=\"nav-item\">NFS Server: <span class=\"float-right badge bg-primary\">" + pvdata.spec.nfs["server"] + "</span></li>";
-                myInnerHTML += "<li class=\"nav-item\">NFS Path: <span class=\"float-right badge bg-primary\">" + pvdata.spec.nfs["path"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`NFS Server:` + "<span class=\"float-right badge bg-primary\">" + pvdata.spec.nfs["server"] + "</span></li>";
+                myInnerHTML += "<li class=\"nav-item\">" + $localize`NFS Path:` + "<span class=\"float-right badge bg-primary\">" + pvdata.spec.nfs["path"] + "</span></li>";
             }            
-            myInnerHTML += "<li class=\"nav-item\">Reclaim Policy: <span class=\"float-right badge bg-primary\">" + pvdata.spec["persistentVolumeReclaimPolicy"] + "</span></li>";
+            myInnerHTML += "<li class=\"nav-item\">" + $localize`Reclaim Policy:` + "<span class=\"float-right badge bg-primary\">" + pvdata.spec["persistentVolumeReclaimPolicy"] + "</span></li>";
         }
         let modalDiv = document.getElementById("modal-info");
         let modalTitle = document.getElementById("info-title");
         let modalBody = document.getElementById("info-cards");
         if(modalTitle != null) {
-            modalTitle.replaceChildren("Disk: " + diskNamespace + " - " + diskName);
+            modalTitle.replaceChildren($localize`Disk: ` + diskNamespace + " - " + diskName);
         }
         if(modalBody != null) {
             modalBody.innerHTML = myInnerHTML;

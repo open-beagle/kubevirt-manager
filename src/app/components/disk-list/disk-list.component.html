@@ -114,7 +114,7 @@
             </ul>
           </div>
           <div class="modal-footer justify-content-center">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-info")'>Close</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-info")' i18n>Close</button>
           </div>
         </div>
         <!-- /.modal-content -->
@@ -136,28 +136,28 @@
           </div>
           <input type="hidden" id="new-node" name="new-node" value="">
           <div class="modal-body" id="new-value">
-            <label for="newDiskName">Disk Name</label>
+            <label for="newDiskName" i18n>Disk Name</label>
             <input #newdiskname type="text" class="form-control" id="new-disk-name" name="new-disk-name" placeholder="disk-name">
-            <label for="newDiskNamespace">Namespace:</label>
+            <label for="newDiskNamespace" i18n>Namespace:</label>
             <select #newdisknamespace class="custom-select rounded-0" name="new-disk-namespace" id="new-disk-namespace">
                 <option>Value 1</option>
             </select>
-            <label for="newDiskStorageClass">Storage Class:</label>
+            <label for="newDiskStorageClass" i18n>Storage Class:</label>
             <select #newdiskstorageclass class="custom-select rounded-0" name="new-disk-storageclass" id="new-disk-storageclass">
                 <option>Value 1</option>
             </select>
-            <label for="newDiskAccessMode">Access Mode:</label>
+            <label for="newDiskAccessMode" i18n>Access Mode:</label>
             <select #newdiskaccessmode class="custom-select rounded-0" name="new-disk-accessmode" id="new-disk-accessmode">
                 <option>ReadWriteOnce</option>
                 <option>ReadOnlyMany</option>
                 <option>ReadWriteMany</option>
             </select>
-            <label for="newDisksize">Size in GB</label>
+            <label for="newDisksize" i18n>Size in GB</label>
             <input #newdisksize type="number" class="form-control" id="new-disk-size" name="new-disk-size" placeholder="0">
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")'>Close</button>
-            <button type="button" class="btn btn-primary" (click)="applyNew(newdisknamespace.value, newdiskname.value , newdiskstorageclass.value, newdiskaccessmode.value, newdisksize.value)">Create</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")' i18n>Close</button>
+            <button type="button" class="btn btn-primary" (click)="applyNew(newdisknamespace.value, newdiskname.value , newdiskstorageclass.value, newdiskaccessmode.value, newdisksize.value)" i18n>Create</button>
           </div>
         </div>
         <!-- /.modal-content -->
@@ -183,8 +183,8 @@
             <p>BODY_TEMPLATE</p>
           </div>
           <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")'>Close</button>
-            <button type="button" class="btn btn-danger" (click)="applyDelete()">Delete</button>
+            <button type="button" class="btn btn-default" (click)='hideComponent("modal-delete")' i18n>Close</button>
+            <button type="button" class="btn btn-danger" (click)="applyDelete()" i18n>Delete</button>
           </div>
         </div>
         <!-- /.modal-content -->

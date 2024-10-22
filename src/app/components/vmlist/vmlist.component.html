@@ -172,29 +172,29 @@
                 <!-- TABS Selector-->
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active" id="newvm-home-tab" data-toggle="pill" href="#newvm-home" role="tab" aria-controls="newvm-home" aria-selected="false">Basic</a>
+                    <a class="nav-link active" id="newvm-home-tab" data-toggle="pill" href="#newvm-home" role="tab" aria-controls="newvm-home" aria-selected="false" i18n>Basic</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="newvm-labels-tab" data-toggle="pill" href="#newvm-labels" role="tab" aria-controls="newvm-labels" aria-selected="false">Labels</a>
+                    <a class="nav-link" id="newvm-labels-tab" data-toggle="pill" href="#newvm-labels" role="tab" aria-controls="newvm-labels" aria-selected="false" i18n>Labels</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="newvm-cpumem-tab" data-toggle="pill" href="#newvm-cpumem" role="tab" aria-controls="newvm-cpumem" aria-selected="false">CPU/Memory</a>
+                    <a class="nav-link" id="newvm-cpumem-tab" data-toggle="pill" href="#newvm-cpumem" role="tab" aria-controls="newvm-cpumem" aria-selected="false" i18n>CPU/Memory</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="newvm-disks-tab" data-toggle="pill" href="#newvm-disks" role="tab" aria-controls="newvm-disks" aria-selected="false">Disk</a>
+                    <a class="nav-link" id="newvm-disks-tab" data-toggle="pill" href="#newvm-disks" role="tab" aria-controls="newvm-disks" aria-selected="false" i18n>Disk</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="newvm-net-tab" data-toggle="pill" href="#newvm-net" role="tab" aria-controls="newvm-net" aria-selected="false">Networking</a>
+                    <a class="nav-link" id="newvm-net-tab" data-toggle="pill" href="#newvm-net" role="tab" aria-controls="newvm-net" aria-selected="false" i18n>Networking</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="newvm-userdata-tab" data-toggle="pill" href="#newvm-userdata" role="tab" aria-controls="newvm-userdata" aria-selected="false">User Data</a>
+                    <a class="nav-link" id="newvm-userdata-tab" data-toggle="pill" href="#newvm-userdata" role="tab" aria-controls="newvm-userdata" aria-selected="false" i18n>User Data</a>
                   </li>
                   <li class="nav-item">
                     <!-- This is hidden by default, and only shown if Network != podNetwork -->
-                    <a class="nav-link" id="newvm-netdata-tab" data-toggle="pill" href="#newvm-netdata" role="tab" aria-controls="newvm-netdata" aria-selected="false" style="display: none;">Network Data</a>
+                    <a class="nav-link" id="newvm-netdata-tab" data-toggle="pill" href="#newvm-netdata" role="tab" aria-controls="newvm-netdata" aria-selected="false" style="display: none;" i18n>Network Data</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="newpool-initscript-tab" data-toggle="pill" href="#newpool-initscript" role="tab" aria-controls="newpool-initscript" aria-selected="false">Init Script</a>
+                    <a class="nav-link" id="newpool-initscript-tab" data-toggle="pill" href="#newpool-initscript" role="tab" aria-controls="newpool-initscript" aria-selected="false" i18n>Init Script</a>
                   </li>
                 </ul>
               </div>
@@ -202,9 +202,9 @@
                 <!-- HOME TAB -->
                 <div class="tab-content" id="custom-tabs-two-tabContent">
                   <div class="tab-pane fade show active" id="newvm-home" role="tabpanel" aria-labelledby="newvm-home-tab">
-                    <label for="newvm-name">Name:</label>
+                    <label for="newvm-name" i18n>Name:</label>
                     <input #newvmname type="text" class="form-control" id="newvm-name" name="newvm-name">
-                    <label for="newvm-namespaces">Namespace:</label>
+                    <label for="newvm-namespaces" i18n>Namespace:</label>
                     <select #newvmnamespace class="custom-select rounded-0" name="newvm-namespace" id="newvm-namespace" (change)="onChangeNamespace(newvmnamespace.value)">
                       <option>Value 1</option>
                     </select>
@@ -216,7 +216,7 @@
                           <thead>
                               <tr>
                               <th style="width: 250px">Key</th>
-                              <th style="width: 250px">Value</th>
+                              <th style="width: 250px" i18n>Value</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -245,7 +245,7 @@
                   </div>
                   <!-- CPU/MEM TAB -->
                   <div class="tab-pane fade" id="newvm-cpumem" role="tabpanel" aria-labelledby="newvm-cpumem-tab">
-                    <label for="newvm-namespaces">Virtual Machine Type:</label>
+                    <label for="newvm-namespaces" i18n>Virtual Machine Type:</label>
                     <select #newvmtype class="custom-select rounded-0" name="newvm-type" id="newvm-type" (change)="onChangeType(newvmtype.value)">
                         <option>Value 1</option>
                     </select>

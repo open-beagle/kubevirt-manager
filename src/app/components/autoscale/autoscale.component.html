@@ -73,7 +73,7 @@
               </button>
             </div>
             <div class="modal-body" id="new-value">
-              <label for="newHPAName">Name:</label>
+              <label for="newHPAName" i18n>Name:</label>
               <input #newhpaname type="text" class="form-control" id="new-hpa-name" name="new-hpa-name" placeholder="name">
               <label for="newHPANamespace" i18n>Namespace:</label>
               <select #newhpanamespace class="custom-select rounded-0" name="new-hpa-namespace" id="new-hpa-namespace" (change)="onChangeNamespace(newhpanamespace.value)">
@@ -91,8 +91,8 @@
               <input #newhpathreshold type="number" class="form-control" id="new-hpa-threshold" name="new-hpa-threshold" placeholder="75">
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)='applyNew(newhpaname.value, newhpanamespace.value, newhpatargetpool.value, newhpamin.value, newhpamax.value, newhpathreshold.value)'>Create</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-new")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)='applyNew(newhpaname.value, newhpanamespace.value, newhpatargetpool.value, newhpamin.value, newhpamax.value, newhpathreshold.value)' i18n>Create</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -123,8 +123,8 @@
               <input #edithpathreshold type="number" class="form-control" id="edit-hpa-threshold" name="edit-hpa-threshold" value="75">
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" (click)='hideComponent("modal-edit")'>Close</button>
-              <button type="button" class="btn btn-primary" (click)='applyEdit(edithpanamespace.value, edithpaname.value, edithpamin.value, edithpamax.value, edithpathreshold.value)'>Save</button>
+              <button type="button" class="btn btn-default" (click)='hideComponent("modal-edit")' i18n>Close</button>
+              <button type="button" class="btn btn-primary" (click)='applyEdit(edithpanamespace.value, edithpaname.value, edithpamin.value, edithpamax.value, edithpathreshold.value)' i18n>Save</button>
             </div>
           </div>
           <!-- /.modal-content -->

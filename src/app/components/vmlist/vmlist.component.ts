@@ -251,7 +251,7 @@ export class VmlistComponent implements OnInit {
          * to avoid delays
          */
         if(modalTitle != null) {
-            modalTitle.replaceChildren("New Virtual Machine: " + nodeName);
+            modalTitle.replaceChildren($localize`New Virtual Machine: ` + nodeName);
         }
         if(modalDiv != null) {
             modalDiv.setAttribute("class", "modal fade show");
